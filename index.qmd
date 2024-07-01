@@ -1,6 +1,6 @@
 ---
-title: Neuroinformatics Unit
-subtitle: Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL.
+title: Building Software Tools for Systems Neuroscience
+subtitle: INCF/OCNS Software WG
 author: Adam Tyson
 execute: 
   enabled: true
@@ -8,7 +8,7 @@ format:
     revealjs:
         theme: [default, niu-light.scss]
         logo: img/logo_niu_light.png
-        footer: "ag-neuro-rse | 2024-02-12"
+        footer: "neuroinformatics.dev | 2024-07-09"
         slide-number: c
         menu:
             numbers: true
@@ -45,14 +45,102 @@ format:
           margin-left: 0
         embed-resources: true
         page-layout: full
-
+papers:
+  neuro-needs-behav-title: "Neuroscience Needs Behavior: Correcting a Reductionist Bias"
+  neuro-needs-behav-doi: "https://www.sciencedirect.com/science/article/pii/S0896627316310406"
+  quant-behav-title: "Quantifying behavior to understand the brain"
+  quant-behav-doi: "https://www.nature.com/articles/s41593-020-00734-z"
+  open-source-title: "Open-source tools for behavioral video analysis: Setup, methods, and best practices"
+  open-source-doi: "https://elifesciences.org/articles/79305"
 ---
+# About us
 
-# [Team](https://neuroinformatics.dev/people.html){preview-link="true" style="text-align: center"}
+## Neuroinformatics Unit
+
+- (Systems) neuroscience & machine learning research software engineering group
+
+- Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL (london)
+
+## Neuroinformatics Unit
+- Data analysis software (anatomy, electrophysiology, functional imaging, behaviour)
+- Data management (specifications, tools)
+- Collaborations (data science, software development, productionisation)
 
 # Software
 
-# BrainGlobe
+# Data management
+
+## NeuroBluePrint{.smaller}
+ Lightweight data specification for systems neuroscience, inspired by BIDS. 
+
+![](img/NeuroBlueprint_project_tree_light.png){fig-align="center"}
+
+::: footer
+[neuroblueprint.neuroinformatics.dev](https://neuroblueprint.neuroinformatics.dev)
+:::
+
+## datashuttle{.smaller}
+Tool for directory management and data syncing between remote and local storage
+
+![](img/datashuttle.png){fig-align=center}
+
+::: footer
+[datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev)
+:::
+
+
+# Behavioural analysis
+## Quantifying behaviour: ethogram {.smaller}
+
+> **Ethogram:** a list of typical behaviours performed by an animal, including when and how often they occur
+
+| Time after start (min) | Foraging | Eating | Grooming |
+|------------------------|----------|--------|----------|
+| 0:30                   | 0        | 0      | 1        |
+| 1:00                   | 0        | 0      | 1        |
+| 1:30                   | 1        | 0      | 0        |
+| 2:00                   | 0        | 1      | 0        |
+
+## Quantifying behaviour: modern {.smaller}
+![](img/modern_behav_experiment_analysis.png){fig-align="center" height="400px"}
+
+
+::: aside
+source: [{{< meta papers.open-source-title >}}]({{< meta papers.open-source-doi >}})
+:::
+
+
+## Pose estimation {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+[SLEAP](https://sleap.ai):
+:::
+::::
+
+![source: [sleap.ai](https://sleap.ai/)](img/sleap_movie.gif){fig-align="center" height="400px" style="text-align: center"}
+
+::: aside
+Many others: 
+[DeepLabCut](http://www.mackenziemathislab.org/deeplabcut)
+[LightningPose](https://github.com/danbider/lightning-pose),
+[DeepPoseKit](https://github.com/jgraving/DeepPoseKit),
+[Anipose](https://anipose.readthedocs.io/en/latest/),
+...
+:::
+
+## movement{.smaller}
+A Python toolbox for analysing body movements across space and time, to aid the study of animal behaviour in neuroscience.
+
+![](img/movement_overview.png){fig-align=center}
+
+::: footer
+[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev)
+:::
+
+
+# Anatomy
 
 ## BrainGlobe Initiative {.smaller}
 
@@ -70,7 +158,6 @@ Established 2020 with three aims:
 :::
 
 
-
 ## BrainGlobe Atlas API
 ![](img/atlases.png){}
 
@@ -78,7 +165,44 @@ Established 2020 with three aims:
 [Claudi, F., Petrucco, L., Tyson, A. L. et al (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” Journal of Open Source Software, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
 :::
 
+## BrainGlobe Atlas API
+```python
+from brainglobe_atlasapi.bg_atlas import BrainGlobeAtlas
+atlas = BrainGlobeAtlas("allen_mouse_25um")
 
+reference_image = atlas.reference
+print(reference_image.shape)
+# (528, 320, 456)
+
+annotation_image = atlas.annotation
+print(annotation_image.shape)
+# (528, 320, 456)
+
+from pprint import pprint
+VISp = atlas.structures["VISp"]
+pprint(VISp)
+
+# {'acronym': 'VISp',
+#  'id': 385,
+#  'mesh': None,
+#  'mesh_filename': PosixPath('/home/user/.brainglobe/allen_mouse_25um_v0.3/meshes/385.obj'),
+#  'name': 'Primary visual area',
+#  'rgb_triplet': [8, 133, 140],
+#  'structure_id_path': [997, 8, 567, 688, 695, 315, 669, 385]}
+```
+
+::: footer
+[Claudi, F., Petrucco, L., Tyson, A. L. et al (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” Journal of Open Source Software, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
+:::
+
+
+
+## Atlas generation
+![](img/blackcap.png){fig-align="center" width=120%}
+
+::: footer
+[github.com/brainglobe/brainglobe-template-builder](https://github.com/brainglobe/brainglobe-template-builder)
+:::
 
 
 ## brainreg
@@ -111,37 +235,6 @@ Established 2020 with three aims:
 
 ::: footer
 [Claudi, F. et al. (2021) “Visualizing anatomically registered data with Brainrender” eLife](https://doi.org/10.7554/eLife.65751)
-:::
-
-# Data management
-
-## NeuroBluePrint{.smaller}
- Lightweight data specification for systems neuroscience, inspired by BIDS. 
-
-![](img/NeuroBlueprint_project_tree_light.png){fig-align=center}
-
-::: footer
-[neuroblueprint.neuroinformatics.dev](https://neuroblueprint.neuroinformatics.dev)
-:::
-
-## datashuttle{.smaller}
-Tool for directory management and data syncing between remote and local storage
-
-![](img/datashuttle.png){fig-align=center}
-
-::: footer
-[datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev)
-:::
-
-# Behavioural analysis
-
-## movement{.smaller}
-A Python toolbox for analysing body movements across space and time, to aid the study of animal behaviour in neuroscience.
-
-![](img/movement_overview.png){fig-align=center}
-
-::: footer
-[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev)
 :::
 
 
