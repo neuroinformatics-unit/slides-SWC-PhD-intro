@@ -66,6 +66,7 @@ papers:
 - **Data management** (specifications, tools)
 - **Collaborations** (data science, software development, productionisation)
 
+
 # Projects
 
 # Data management
@@ -368,6 +369,12 @@ pprint(VISp)
 [github.com/brainglobe/brainglobe-registration](https://github.com/brainglobe/brainglobe-registration)
 :::
 
+
+## More details
+
+### [brainglobe.info](http://brainglobe.info/)
+
+### [neuroinformatics.dev](https://neuroinformatics.dev/)
 
 ## Thanks{.smaller}
 Team
