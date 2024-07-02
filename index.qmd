@@ -56,24 +56,50 @@ papers:
 # About us
 
 ## Neuroinformatics Unit
+- Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL (London)
 
-- (Systems) neuroscience & machine learning research software engineering group
+- (Systems) neuroscience & machine learning **research software engineering** group
 
-- Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL (london)
 
 ## Neuroinformatics Unit
-- Data analysis software (anatomy, electrophysiology, functional imaging, behaviour)
-- Data management (specifications, tools)
-- Collaborations (data science, software development, productionisation)
+- **Data analysis software** (anatomy, electrophysiology, functional imaging, behaviour)
+- **Data management** (specifications, tools)
+- **Collaborations** (data science, software development, productionisation)
 
-# Software
+# Projects
 
 # Data management
+
+#
+![](img/errant-science-data-organisation.jpg){fig-align="center"}
+
+::: footer
+[errantscience.com](https://errantscience.com/)
+:::
+
+#
+![](img/data-organisation-over-time.jpg){fig-align="center"}
+
+::: footer
+[errantscience.com](https://errantscience.com/)
+:::
+
+## Data standards
+![](img/NWB.png){fig-align="center" height="200px"}
+
+* Single file
+* Combines raw data, analysis & metadata
+
+## Data standards
+![](img/BIDS.png){fig-align="center" height="200px"}
+
+* Many files
+* Rules for file names, formats & metadata
 
 ## NeuroBluePrint{.smaller}
  Lightweight data specification for systems neuroscience, inspired by BIDS. 
 
-![](img/NeuroBlueprint_project_tree_light.png){fig-align="center"}
+![](img/NeuroBlueprint_project_tree_light.png){fig-align="center" height="500px"}
 
 ::: footer
 [neuroblueprint.neuroinformatics.dev](https://neuroblueprint.neuroinformatics.dev)
@@ -82,12 +108,55 @@ papers:
 ## datashuttle{.smaller}
 Tool for directory management and data syncing between remote and local storage
 
-![](img/datashuttle.png){fig-align=center}
+![](img/datashuttle.png){fig-align="center" height="500px"}
 
 ::: footer
 [datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev)
 :::
 
+
+## Python API
+```python
+from datashuttle import DataShuttle
+
+project = DataShuttle("my_first_project")
+project.make_config_file(
+    local_path=r"C:\Users\Joe\data\local\my_first_project",
+    central_path=r"C:\Users\Joe\data\central\my_first_project",
+    connection_method="local_filesystem",
+)
+project.create_folders(
+    top_level_folder="rawdata",
+    sub_names="sub-001",
+    ses_names="ses-001_@DATE@",
+    datatype=["behav", "ephys"]
+)
+
+project.upload_entire_project()
+```
+
+::: footer
+[datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev)
+:::
+
+## Terminal user interface
+
+![](img/datashuttle_tui.png){fig-align="center"}
+
+::: footer
+[datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev)
+:::
+
+
+
+## Future
+* Standardise metadata
+* Export to NWB
+* Converge with BIDS 2.0
+
+::: footer
+[datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev)
+:::
 
 # Behavioural analysis
 ## Quantifying behaviour: ethogram {.smaller}
@@ -130,14 +199,42 @@ Many others:
 ...
 :::
 
-## movement{.smaller}
-A Python toolbox for analysing body movements across space and time, to aid the study of animal behaviour in neuroscience.
+#
+<!-- A Python toolbox for analysing body movements across space and time, to aid the study of animal behaviour in neuroscience. -->
 
 ![](img/movement_overview.png){fig-align=center}
 
 ::: footer
 [movement.neuroinformatics.dev](https://movement.neuroinformatics.dev)
 :::
+
+## Python API
+```python
+from movement.io import load_poses, save_poses
+from movement.filtering import filter_by_confidence, interpolate_over_time
+from movement.filtering import savgol_filter
+
+ds = load_poses.from_file("/path/to/file.analysis.h5", source_software="SLEAP", fps=30)
+ds = filter_by_confidence(ds, threshold=0.6)
+ds = interpolate_over_time(ds, method="linear", max_gap=1)
+ds = savgol_filter(ds, window_length=0.2, polyorder=2)
+
+save_poses.to_lp_file(ds, "/path/to/file.csv")
+
+displacement = ds.move.compute_displacement()
+velocity = ds.move.compute_velocity()
+accel = ds.move.compute_acceleration()
+
+```
+
+
+## napari plugin{.smaller}
+![](img/napari_movement.png){fig-align=center}
+
+::: footer
+[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev)
+:::
+
 
 
 # Anatomy
@@ -157,12 +254,16 @@ Established 2020 with three aims:
 :::
 :::
 
+::: footer
+[brainglobe.info](https://brainglobe.info/)
+:::
+
 
 ## BrainGlobe Atlas API
 ![](img/atlases.png){}
 
 ::: footer
-[Claudi, F., Petrucco, L., Tyson, A. L. et al (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” Journal of Open Source Software, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
+[Claudi, F. et al. (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” JOSS, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
 :::
 
 ## BrainGlobe Atlas API
@@ -192,89 +293,104 @@ pprint(VISp)
 ```
 
 ::: footer
-[Claudi, F., Petrucco, L., Tyson, A. L. et al (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” Journal of Open Source Software, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
+[Claudi, F. et al. (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” JOSS, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
+:::
+
+
+# Version 1
+
+## Whole brain microscopy
+![](img/whole.png){fig-align="center" width=70%}
+
+## Whole brain microscopy
+![](img/crop.png){fig-align="center" width=70%}
+
+## Whole-brain registration
+![](img/brainreg.png){fig-align="center" width=110%}
+
+
+::: footer
+[Tyson, A. L. et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Sci Rep, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
+:::
+
+
+## 3D cell detection
+![](img/cells.png){fig-align="center" width=70%}
+
+::: footer
+[Tyson, A. L. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
+:::
+
+## Segmentation
+![](img/brainglobe-seg.png){fig-align="center" width=100%}
+
+::: footer
+[Tyson, A. L. et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Sci Rep, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
 :::
 
 
 
-## Atlas generation
+
+
+## Visualisation {background-video="img/cellfinder_small.mp4" background-video-loop="true"}
+
+::: footer
+[Claudi, F. et al. (2021) “Visualizing anatomically registered data with Brainrender” eLife](https://doi.org/10.7554/eLife.65751)
+:::
+
+# Version 2
+## New atlases
 ![](img/blackcap.png){fig-align="center" width=120%}
 
 ::: footer
 [github.com/brainglobe/brainglobe-template-builder](https://github.com/brainglobe/brainglobe-template-builder)
 :::
 
-
-## brainreg
-![](img/brainreg.png){fig-align="center" width=110%}
-
+## Raw data processing
+![](img/brainglobe-stitch.png){fig-align="center"}
 
 ::: footer
-[Tyson, A. L., Vélez-Fort, M., Rousseau, C. V. et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Scientific Reports, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
+[github.com/brainglobe/brainglobe-stitch](https://github.com/brainglobe/brainglobe-stitch)
 :::
 
 
-## cellfinder
-![](img/cells.png){fig-align="center" width=70%}
+## Consistent napari environment
+![](img/brainrender-napari.png){fig-align="center"}
 
 ::: footer
-[Tyson, A. L., Rousseau, C. V., Niedworok, C. J. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
+[github.com/brainglobe/brainrender-napari](https://github.com/brainglobe/brainrender-napari)
 :::
 
-## brainglobe-segmentation
-![](img/brainglobe-seg.png){fig-align="center" width=100%}
+## Support for more data types
+![](img/brainglobe-registration-demo.png){fig-align="center"}
 
 ::: footer
-[Tyson, A. L., Vélez-Fort, M., Rousseau, C. V. et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Scientific Reports, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
-:::
-
-
-
-
-## brainrender {background-video="img/cellfinder_small.mp4" background-video-loop="true"}
-
-::: footer
-[Claudi, F. et al. (2021) “Visualizing anatomically registered data with Brainrender” eLife](https://doi.org/10.7554/eLife.65751)
+[github.com/brainglobe/brainglobe-registration](https://github.com/brainglobe/brainglobe-registration)
 :::
 
 
-## Other tools & WIP{.smaller}
+## Thanks{.smaller}
+Team
 
-Anatomy
+::: {layout-nrow=1}
 
-* [brainglobe-registration](https://github.com/brainglobe/brainglobe-registration) - flexible atlas registration of any (2D/3D) histology data
-* [brainglobe-heatmap](https://github.com/brainglobe/brainglobe-heatmap) - anatomical heatmap generation
-* [brainrender-napari](https://github.com/brainglobe/brainrender-napari) - anatomical data visualisation in napari
+![Laura Porta](img/laura_porta.png)
 
-Electrophysiology
+![Chang Huan lo](img/chang_huan_lo.png)
 
-* [SpikeWrap](https://github.com/neuroinformatics-unit/spikewrap) - high level, easy to use wrapper around SpikeInterface
+![Joe Ziminski](img/joe_ziminski.png)
 
-Developer tools
+![Alessandro Felder](img/alessandro_felder.png)
 
-* [python-cookiecutter](https://github.com/neuroinformatics-unit/python-cookiecutter) - standardised, maintained Python project template with documentation, tests, linting, CI, etc. 
+![Niko Sirmpilatze](img/niko_sirmpilatze.png)
 
-* [actions](https://github.com/neuroinformatics-unit/actions) - standardised, maintained GitHub actions workflows for linting, testing, release & documentation building
+![Igor Tatarnikov](img/igor_tatarnikov.jpg)
 
-## Other projects{.smaller}
-* Data compression
-* Project-specific analysis dashboards
-* Long-term multi-animal tracking
-* Multiphoton (2p/3p) data processing inc. derotation
-* Novel species anatomical atlas generation
-* Productionisation of tools developed by researchers (e.g. [NeuralPlayground](https://github.com/SainsburyWellcomeCentre/NeuralPlayground))
+![Sofía Miñano](img/sofia_minano.png)
 
+:::
 
-## Links{.smaller}
+Funders
 
-**Neuroinformatics unit**
+![](img/funders.png){fig-align="center" height="150px"}
 
-* [Website](https://neuroinformatics.dev)
-* [GitHub organisation](https://github.com/neuroinformatics-Unit)
-* [Zulip chat](https://neuroinformatics.zulipchat.com/)
-
-**BrainGlobe**
-
-* [Website](https://brainglobe.info)
-* [GitHub organisation](https://github.com/brainglobe)
-* [Zulip chat](https://brainglobe.zulipchat.com/)
