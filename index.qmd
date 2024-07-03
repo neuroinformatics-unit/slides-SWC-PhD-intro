@@ -67,7 +67,21 @@ papers:
 - **Collaborations** (data science, software development, productionisation)
 
 
-# Projects
+## Projects
+* Data standardisation and management
+* Developer tools
+* Extracellular electrophysiology analysis
+* Video behavioural analysis
+* Multiphoton analysis
+* Computational neuroanatomy (BrainGlobe)
+
+## Projects
+* **Data standardisation and management**
+* Developer tools
+* Extracellular electrophysiology analysis
+* **Video behavioural analysis**
+* Multiphoton analysis
+* **Computational neuroanatomy (BrainGlobe)**
 
 # Data management
 
