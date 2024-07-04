@@ -45,20 +45,36 @@ format:
           margin-left: 0
         embed-resources: true
         page-layout: full
-papers:
-  neuro-needs-behav-title: "Neuroscience Needs Behavior: Correcting a Reductionist Bias"
-  neuro-needs-behav-doi: "https://www.sciencedirect.com/science/article/pii/S0896627316310406"
-  quant-behav-title: "Quantifying behavior to understand the brain"
-  quant-behav-doi: "https://www.nature.com/articles/s41593-020-00734-z"
-  open-source-title: "Open-source tools for behavioral video analysis: Setup, methods, and best practices"
-  open-source-doi: "https://elifesciences.org/articles/79305"
+
 ---
 # About us
 
-## Neuroinformatics Unit
-- Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL (London)
+## Neuroinformatics Unit{.smaller}
 
+::: {.columns}
+::: {.column width="40%"}
+- Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL (London)
 - (Systems) neuroscience & machine learning **research software engineering** group
+:::
+::: {.column width="60%"}
+![](img/SWC.jpg)
+:::
+:::
+
+## Neuroinformatics Unit{.smaller}
+
+::: {.columns}
+::: {.column width="40%"}
+- Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL (London)
+- (Systems) neuroscience & machine learning **research software engineering** group
+:::
+::: {.column width="60"}
+![](img/SWC_map_pin.png)
+:::
+:::
+
+
+
 
 
 ## Neuroinformatics Unit
@@ -66,7 +82,24 @@ papers:
 - **Data management** (specifications, tools)
 - **Collaborations** (data science, software development, productionisation)
 
-# Projects
+
+## Current projects
+* Data standardisation and management
+* Developer tools
+* Modelling
+* Extracellular electrophysiology analysis
+* Video behavioural analysis
+* Multiphoton analysis
+* Computational neuroanatomy
+
+## Current projects
+* **Data standardisation and management**
+* Developer tools
+* Modelling
+* Extracellular electrophysiology analysis
+* **Video behavioural analysis**
+* Multiphoton analysis
+* **Computational neuroanatomy**
 
 # Data management
 
@@ -84,29 +117,51 @@ papers:
 [errantscience.com](https://errantscience.com/)
 :::
 
-## Data standards
-![](img/NWB.png){fig-align="center" height="200px"}
+# Data standards as a solution
 
-* Single file
-* Combines raw data, analysis & metadata
+## {.smaller}
 
-## Data standards
-![](img/BIDS.png){fig-align="center" height="200px"}
+![](img/NWB.png){fig-align="left" height="150px"}
 
-* Many files
-* Rules for file names, formats & metadata
+![](img/nwb_data.png){fig-align="center" height="370px"}
 
-## NeuroBluePrint{.smaller}
- Lightweight data specification for systems neuroscience, inspired by BIDS. 
+::: footer
+[nwb.org](https://www.nwb.org/)
+:::
 
-![](img/NeuroBlueprint_project_tree_light.png){fig-align="center" height="500px"}
+##
+
+![](img/BIDS.png){fig-align="left" height="150px"}
+
+![](img/BIDS_data.png){fig-align="center" height="370px"}
+
+::: footer
+[bids.neuroimaging.io](https://bids.neuroimaging.io/)
+:::
+
+# Bridging the gap 
+
+## NeuroBluePrint
+ * Inspired by BIDS
+ * Lightweight data specification for (systems) neuroscience
+ * Maximise benefits of standardisation
+ * Minimise burden
 
 ::: footer
 [neuroblueprint.neuroinformatics.dev](https://neuroblueprint.neuroinformatics.dev)
 :::
 
-## datashuttle{.smaller}
-Tool for directory management and data syncing between remote and local storage
+
+## NeuroBluePrint{.smaller}
+![](img/NeuroBlueprint_project_tree_light.png){fig-align="center" height="550px"}
+
+::: footer
+[neuroblueprint.neuroinformatics.dev](https://neuroblueprint.neuroinformatics.dev)
+:::
+
+
+## Facilitate adoption - `datashuttle`{.smaller}
+
 
 ![](img/datashuttle.png){fig-align="center" height="500px"}
 
@@ -153,6 +208,7 @@ project.upload_entire_project()
 * Standardise metadata
 * Export to NWB
 * Converge with BIDS 2.0
+* Eventually not be recquired!
 
 ::: footer
 [datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev)
@@ -161,7 +217,6 @@ project.upload_entire_project()
 # Behavioural analysis
 ## Quantifying behaviour: ethogram {.smaller}
 
-> **Ethogram:** a list of typical behaviours performed by an animal, including when and how often they occur
 
 | Time after start (min) | Foraging | Eating | Grooming |
 |------------------------|----------|--------|----------|
@@ -171,28 +226,21 @@ project.upload_entire_project()
 | 2:00                   | 0        | 1      | 0        |
 
 ## Quantifying behaviour: modern {.smaller}
-![](img/modern_behav_experiment_analysis.png){fig-align="center" height="400px"}
+![](img/modern_behav_experiment_analysis.png){fig-align="center" height="500px"}
 
 
-::: aside
-source: [{{< meta papers.open-source-title >}}]({{< meta papers.open-source-doi >}})
+::: footer
+[Luxem, K. et al. (2023) “Open-source tools for behavioral video analysis: Setup, methods, and best practices” eLife, 12:e79305](https://doi.org/10.7554/eLife.79305)
 :::
-
 
 ## Pose estimation {.smaller}
 
-:::: {.columns}
+![source: [sleap.ai](https://sleap.ai/)](img/sleap_movie.gif){fig-align="center" height="450px" style="text-align: center"}
 
-::: {.column width="50%"}
-[SLEAP](https://sleap.ai):
-:::
-::::
-
-![source: [sleap.ai](https://sleap.ai/)](img/sleap_movie.gif){fig-align="center" height="400px" style="text-align: center"}
 
 ::: aside
 Many others: 
-[DeepLabCut](http://www.mackenziemathislab.org/deeplabcut)
+[DeepLabCut](http://www.mackenziemathislab.org/deeplabcut),
 [LightningPose](https://github.com/danbider/lightning-pose),
 [DeepPoseKit](https://github.com/jgraving/DeepPoseKit),
 [Anipose](https://anipose.readthedocs.io/en/latest/),
@@ -200,7 +248,7 @@ Many others:
 :::
 
 #
-<!-- A Python toolbox for analysing body movements across space and time, to aid the study of animal behaviour in neuroscience. -->
+![](img/movement_title.png){fig-align=center, height="80px"}
 
 ![](img/movement_overview.png){fig-align=center}
 
@@ -234,8 +282,16 @@ accel = ds.move.compute_acceleration()
 ::: footer
 [movement.neuroinformatics.dev](https://movement.neuroinformatics.dev)
 :::
+## Future
+- Support for more formats
+- Neurodata Without Borders export
+- Support for all relevant kinematic variables
+- Arbitrary regions of interest analysis
+- Define and transform coordinate systems
 
-
+::: footer
+[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev)
+:::
 
 # Anatomy
 
@@ -266,7 +322,34 @@ Established 2020 with three aims:
 [Claudi, F. et al. (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” JOSS, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
 :::
 
-## BrainGlobe Atlas API
+## Current atlases {.smaller}
+
+- [Allen Mouse Brain Atlas](https://doi.org/10.1016/j.cell.2020.04.007) at 10, 25, 50 and 100 micron resolutions
+- [Allen Human Brain Atlas](https://www.brain-map.org) at 100 micron resolution
+- [Max Planck Zebrafish Brain Atlas](http://fishatlas.neuro.mpg.de) at 1 micron resolution
+- [Enhanced and Unified Mouse Brain Atlas](https://kimlab.io/brain-map/atlas/) at 10, 25, 50 and 100 micron resolutions
+- [Smoothed version of the Kim et al. mouse reference atlas](https://doi.org/10.1016/j.celrep.2014.12.014) at 10, 25, 50 and 100 micron resolutions
+- [Gubra's LSFM mouse brain atlas](https://doi.org/10.1007/s12021-020-09490-8) at 20 micron resolution
+- [3D version of the Allen mouse spinal cord atlas](https://doi.org/10.1101/2021.05.06.443008) at 20 x 10 x 10 micron resolution
+- [AZBA: A 3D Adult Zebrafish Brain Atlas](https://doi.org/10.1101/2021.05.04.442625) at 4 micron resolution
+- [Waxholm Space atlas of the Sprague Dawley rat brain](https://doi.org/10.1038/s41592-023-02034-3) at 39 micron resolution
+- [3D Edge-Aware Refined Atlases Derived from the Allen Developing Mouse Brain Atlases](https://doi.org/10.7554/eLife.61408) (E13, E15, E18, P4, P14, P28 & P56)
+- [Princeton Mouse Brain Atlas](https://brainmaps.princeton.edu/2020/09/princeton-mouse-brain-atlas-links) at 20 micron resolution
+- [Kim Lab Developmental CCF (P56)](https://data.mendeley.com/datasets/2svx788ddf/1) at 10 micron resolution with 8 reference images - STP, LSFM (iDISCO) and MRI (a0, adc, dwo, fa, MTR, T2)
+- [Blind Mexican Cavefish Brain Atlas](https://doi.org/10.7554/eLife.80777) at 2um resolution
+
+::: footer
+[Claudi, F. et al. (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” JOSS, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
+:::
+
+
+::: footer
+[Claudi, F. et al. (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” JOSS, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
+:::
+
+
+
+## BrainGlobe Atlas API {.smaller}
 ```python
 from brainglobe_atlasapi.bg_atlas import BrainGlobeAtlas
 atlas = BrainGlobeAtlas("allen_mouse_25um")
@@ -330,23 +413,21 @@ pprint(VISp)
 
 
 
-
-
 ## Visualisation {background-video="img/cellfinder_small.mp4" background-video-loop="true"}
 
 ::: footer
-[Claudi, F. et al. (2021) “Visualizing anatomically registered data with Brainrender” eLife](https://doi.org/10.7554/eLife.65751)
+[Claudi, F. et al. (2021) “Visualizing anatomically registered data with Brainrender” eLife, 10:e65751](https://doi.org/10.7554/eLife.65751)
 :::
 
 # Version 2
-## New atlases
+## Building atlases
 ![](img/blackcap.png){fig-align="center" width=120%}
 
 ::: footer
 [github.com/brainglobe/brainglobe-template-builder](https://github.com/brainglobe/brainglobe-template-builder)
 :::
 
-## Raw data processing
+## More raw data processing
 ![](img/brainglobe-stitch.png){fig-align="center"}
 
 ::: footer
@@ -368,6 +449,12 @@ pprint(VISp)
 [github.com/brainglobe/brainglobe-registration](https://github.com/brainglobe/brainglobe-registration)
 :::
 
+
+## More details
+
+### [brainglobe.info](http://brainglobe.info/)
+
+### [neuroinformatics.dev](https://neuroinformatics.dev/)
 
 ## Thanks{.smaller}
 Team
