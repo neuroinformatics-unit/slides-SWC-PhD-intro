@@ -54,7 +54,6 @@ format:
 ::: {.columns}
 ::: {.column width="40%"}
 - Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL (London)
-- (Systems) neuroscience & machine learning **research software engineering** group
 :::
 ::: {.column width="60%"}
 ![](img/SWC.jpg)
@@ -66,7 +65,11 @@ format:
 ::: {.columns}
 ::: {.column width="40%"}
 - Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL (London)
+
+:::{.fragment}
 - (Systems) neuroscience & machine learning **research software engineering** group
+:::
+
 :::
 ::: {.column width="60"}
 ![](img/SWC_map_pin.png)
@@ -74,16 +77,15 @@ format:
 :::
 
 
-
-
-
-## Neuroinformatics Unit
+## What we do
+:::{.incremental}
 - **Data analysis software** (anatomy, electrophysiology, functional imaging, behaviour)
 - **Data management** (specifications, tools)
 - **Collaborations** (data science, software development, productionisation)
-
+:::
 
 ## Current projects
+:::{.incremental}
 * Data standardisation and management
 * Developer tools
 * Modelling
@@ -91,6 +93,7 @@ format:
 * Video behavioural analysis
 * Multiphoton analysis
 * Computational neuroanatomy
+:::
 
 ## Current projects
 * **Data standardisation and management**
@@ -141,18 +144,21 @@ format:
 
 # Bridging the gap 
 
-## NeuroBluePrint
+## A simpler standard
+### [`NeuroBlueprint`](https://github.com/neuroinformatics-unit/NeuroBlueprint)
+:::{.incremental}
  * Inspired by BIDS
  * Lightweight data specification for (systems) neuroscience
  * Maximise benefits of standardisation
  * Minimise burden
+:::
 
 ::: footer
 [neuroblueprint.neuroinformatics.dev](https://neuroblueprint.neuroinformatics.dev)
 :::
 
 
-## NeuroBluePrint{.smaller}
+##
 ![](img/NeuroBlueprint_project_tree_light.png){fig-align="center" height="550px"}
 
 ::: footer
@@ -160,10 +166,11 @@ format:
 :::
 
 
-## Facilitate adoption - `datashuttle`{.smaller}
+## Aiding adoption
+### [`datashuttle`](https://github.com/neuroinformatics-unit/datashuttle)
 
 
-![](img/datashuttle.png){fig-align="center" height="500px"}
+![](img/datashuttle.png){fig-align="center" height="450px"}
 
 ::: footer
 [datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev)
@@ -205,10 +212,12 @@ project.upload_entire_project()
 
 
 ## Future
+:::{.incremental}
 * Standardise metadata
 * Export to NWB
 * Converge with BIDS 2.0
 * Eventually not be recquired!
+:::
 
 ::: footer
 [datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev)
@@ -283,11 +292,13 @@ accel = ds.move.compute_acceleration()
 [movement.neuroinformatics.dev](https://movement.neuroinformatics.dev)
 :::
 ## Future
+:::{.incremental}
 - Support for more formats
 - Neurodata Without Borders export
 - Support for all relevant kinematic variables
 - Arbitrary regions of interest analysis
 - Define and transform coordinate systems
+:::
 
 ::: footer
 [movement.neuroinformatics.dev](https://movement.neuroinformatics.dev)
@@ -301,9 +312,12 @@ accel = ds.move.compute_acceleration()
 ::: {.column width="55%"}
 Established 2020 with three aims:
 
+:::{.incremental}
 1. Develop general-purpose tools to help others build interoperable software
 2. Develop specialist software for specific analysis and visualisation needs
 3. Reduce barriers of entry, and facilitate the building of an ecosystem of computational neuroanatomy tools.
+:::
+
 :::
 ::: {.column width="45%"}
 ![](img/tracing.png)
@@ -316,13 +330,15 @@ Established 2020 with three aims:
 
 
 ## BrainGlobe Atlas API
-![](img/atlases.png){}
+### [brainglobe-atlasapi](https://github.com/brainglobe/brainglobe-atlasapi)
+![](img/atlases.png){fig-align="center"}
 
 ::: footer
 [Claudi, F. et al. (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” JOSS, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
 :::
 
 ## Current atlases {.smaller}
+::: {style="font-size: 70%;"}
 
 - [Allen Mouse Brain Atlas](https://doi.org/10.1016/j.cell.2020.04.007) at 10, 25, 50 and 100 micron resolutions
 - [Allen Human Brain Atlas](https://www.brain-map.org) at 100 micron resolution
@@ -337,6 +353,7 @@ Established 2020 with three aims:
 - [Princeton Mouse Brain Atlas](https://brainmaps.princeton.edu/2020/09/princeton-mouse-brain-atlas-links) at 20 micron resolution
 - [Kim Lab Developmental CCF (P56)](https://data.mendeley.com/datasets/2svx788ddf/1) at 10 micron resolution with 8 reference images - STP, LSFM (iDISCO) and MRI (a0, adc, dwo, fa, MTR, T2)
 - [Blind Mexican Cavefish Brain Atlas](https://doi.org/10.7554/eLife.80777) at 2um resolution
+:::
 
 ::: footer
 [Claudi, F. et al. (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” JOSS, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
@@ -396,15 +413,42 @@ pprint(VISp)
 [Tyson, A. L. et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Sci Rep, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
 :::
 
+## 3D cell detection
+### [`cellfinder`](https://github.com/brainglobe/cellfinder)
+![](img/raw.png){fig-align="center" width=70%}
+
+::: footer
+[Tyson, A. L. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
+:::
 
 ## 3D cell detection
+### [`cellfinder`](https://github.com/brainglobe/cellfinder)
+![](img/detect.png){fig-align="center" width=70%}
+
+::: footer
+[Tyson, A. L. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
+:::
+
+
+## 3D cell detection
+### [`cellfinder`](https://github.com/brainglobe/cellfinder)
+![](img/classify.png){fig-align="center" width=70%}
+
+::: footer
+[Tyson, A. L. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
+:::
+
+
+## 3D cell detection
+### [`cellfinder`](https://github.com/brainglobe/cellfinder)
 ![](img/cells.png){fig-align="center" width=70%}
 
 ::: footer
 [Tyson, A. L. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
 :::
 
-## Segmentation
+## Spatial analysis
+### [`brainglobe-segmentation`](https://github.com/brainglobe/brainglobe-segmentation)
 ![](img/brainglobe-seg.png){fig-align="center" width=100%}
 
 ::: footer
@@ -414,6 +458,7 @@ pprint(VISp)
 
 
 ## Visualisation {background-video="img/cellfinder_small.mp4" background-video-loop="true"}
+### [`brainrender`](https://github.com/brainglobe/brainrender)
 
 ::: footer
 [Claudi, F. et al. (2021) “Visualizing anatomically registered data with Brainrender” eLife, 10:e65751](https://doi.org/10.7554/eLife.65751)
@@ -450,14 +495,28 @@ pprint(VISp)
 :::
 
 
-## More details
+# Thanks
 
-### [brainglobe.info](http://brainglobe.info/)
+##
+#### Support
 
-### [neuroinformatics.dev](https://neuroinformatics.dev/)
+![](img/institutes.png){fig-align="center" height="90px"}
 
-## Thanks{.smaller}
-Team
+![](img/funders.png){fig-align="center" height="90px"}
+
+:::{.fragment}
+#### Contributors
+
+::: {style="font-size: 40%;"}
+
+Stephen Lenzi, Rob Campbell, Joe Ziminski, Sofia Miñano, Niko Sirmpilatze, Nicholas Del Grosso, Laura Porta, Lee Cossell, Antonin Blot, David Pérez-Suárez, David Stansby, Will Graham, Patrick Roddy, Adrien Berchet, Mathieu Bourdenx, Ben Kantor, NovaFae, David Young, Sam Clothier, Gubra-ApS, Kailyn Fields, ramroomh, Samuel Diebolt, Chris Roat, Oren Amsalem, kclamar, Draga Doncila Pop, juanma9613, Jules Scholler, Iaroslavna Vasylieva, Nicolas Peschke, Justin Kiggins, Peter Sobolewski, Simão Bolota, chili-chiu, jaimergp, Sebastian Lammers, Matt Colligan, Paul Brodersen, Carter Peene, francesshei, Sean Martin, Adam Tyson, Federico Claudi, Luigi Petrucco, Alessandro Felder, Christian Niedworok, Charly Rousseau, Horst Obenhaus, Chryssanthi Tsitoura, Sepiedeh Keshavarzi, Mateo Vélez-Fort, Ben Dichter, 4iar, Marco Musy, Anna Medyukhina, stegiopast, EmanPaoli, lidakanari, Alexis Arnaudon, Yaroslav Halchenko, Ziyang Liu, Philip Shamash, koushik-ms, Harald Reingruber, Emily Jane Dennis, Peak, Maximilian Blacher, Hernando Martinez Vergara, Estelle, nicole-vissers, GD, Michael Kunst, Estelle Nassar, Sara Mederos, Igor Tatarnikov, Viktor Plattner, Carlo Castoldi, Jingjie Li, Guillaume Le Goc, Harry Carey, Matt Einhorn, Kimberly Meechan, Robert Kozol, Chang Huan Lo, Dhruv Sharma, Brandon Peri, Ivan Varela
+
+:::
+
+:::
+
+##
+#### Team
 
 ::: {layout-nrow=1}
 
@@ -474,10 +533,13 @@ Team
 ![Igor Tatarnikov](img/igor_tatarnikov.jpg)
 
 ![Sofía Miñano](img/sofia_minano.png)
-
 :::
 
-Funders
 
-![](img/funders.png){fig-align="center" height="150px"}
+:::{.fragment}
+#### More details
 
+### [neuroinformatics.dev](https://neuroinformatics.dev/)
+### [brainglobe.info](http://brainglobe.info/)
+
+:::
