@@ -144,6 +144,17 @@ format:
 
 # Bridging the gap 
 
+
+##
+
+![](img/standards.png){fig-align="center" height="300px"}
+
+
+::: footer
+[xkcd.com](https://xkcd.com/927/)
+:::
+
+
 ## A simpler standard
 ### [`NeuroBlueprint`](https://github.com/neuroinformatics-unit/NeuroBlueprint)
 :::{.incremental}
@@ -294,7 +305,7 @@ accel = ds.move.compute_acceleration()
 ## Future
 :::{.incremental}
 - Support for more formats
-- Neurodata Without Borders export
+- NWB export
 - Support for all relevant kinematic variables
 - Arbitrary regions of interest analysis
 - Define and transform coordinate systems
