@@ -398,14 +398,17 @@ pprint(VISp)
 
 
 # Version 1
+Whole brain microscopy
 
-## Whole brain microscopy
+## 
 ![](img/whole.png){fig-align="center" width=70%}
 
-## Whole brain microscopy
+## 
 ![](img/crop.png){fig-align="center" width=70%}
 
 ## Whole-brain registration
+### [`brainreg`](https://github.com/brainglobe/brainreg)
+
 ![](img/brainreg.png){fig-align="center" width=110%}
 
 
@@ -465,7 +468,21 @@ pprint(VISp)
 :::
 
 # Version 2
-## Building atlases
+Expanding access
+
+## Adding new atlases {.smaller}
+- Allen mouse brain with barrel annotations
+- Blind mexican cavefish
+- Latest version of Waxholm rat
+- Axolotl
+- Prarier Vole
+- Princeton RAtlas
+- Cuttlefish
+- Developmental Mouse Brain atlas
+- NHP
+- Human
+
+## Building novel atlases
 ![](img/blackcap.png){fig-align="center" width=120%}
 
 ::: footer
