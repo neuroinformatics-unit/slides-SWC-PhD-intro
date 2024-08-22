@@ -164,14 +164,14 @@ format:
 ## Thursday, October 3rd{.smaller}
 
 #### 10:00-13:00: Video behavioural analysis (1)
-**Aims:**
+**Aims:** Introduction to the theory and practice of tracking animals in videos, including hands-on training of pose estimation models.
 
 **Location:** SWC Brasserie Seminar Room
 
 **Lead by:** Niko Sirmpilatze, Sofía Miñano, Chang Huan Lo
 
 #### 14:00-17:00: Video behavioural analysis
-**Aims:**
+**Aims:** Using Python to analyse animal tracks produced via pose estimation: cleaning data, quantifying movement, extracting behavioural syllables.
 
 **Location:** SWC Brasserie Seminar Room
 
