@@ -1,14 +1,13 @@
 ---
-title: Building Software Tools for Systems Neuroscience
-subtitle: INCF/OCNS Software WG
-author: Adam Tyson
+title: Software Skills for Systems Neuroscience
+author: SWC/GCNU Neuroinformatics Unit
 execute: 
   enabled: true
 format:
     revealjs:
         theme: [default, niu-light.scss]
         logo: img/logo_niu_light.png
-        footer: "neuroinformatics.dev | 2024-07-09"
+        footer: "software-skills.neuroinformatics.dev | 2024"
         slide-number: c
         menu:
             numbers: true
@@ -49,33 +48,25 @@ format:
 ---
 # About us
 
-## Neuroinformatics Unit{.smaller}
+## Neuroinformatics Unit
+(Systems) neuroscience & machine learning **research software engineering** group
 
-::: {.columns}
-::: {.column width="40%"}
-- Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL (London)
-:::
-::: {.column width="60%"}
-![](img/SWC.jpg)
-:::
-:::
+## Team
+::: {layout-nrow=1}
+![Laura Porta](img/laura_porta.png)
 
-## Neuroinformatics Unit{.smaller}
+![Chang Huan lo](img/chang_huan_lo.png)
 
-::: {.columns}
-::: {.column width="40%"}
-- Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL (London)
+![Joe Ziminski](img/joe_ziminski.png)
 
-:::{.fragment}
-- (Systems) neuroscience & machine learning **research software engineering** group
-:::
+![Alessandro Felder](img/alessandro_felder.png)
 
-:::
-::: {.column width="60"}
-![](img/SWC_map_pin.png)
-:::
-:::
+![Niko Sirmpilatze](img/niko_sirmpilatze.png)
 
+![Igor Tatarnikov](img/igor_tatarnikov.jpg)
+
+![Sofía Miñano](img/sofia_minano.png)
+:::
 
 ## What we do
 :::{.incremental}
@@ -95,479 +86,147 @@ format:
 * Computational neuroanatomy
 :::
 
-## Current projects
-* **Data standardisation and management**
-* Developer tools
-* Modelling
-* Extracellular electrophysiology analysis
-* **Video behavioural analysis**
-* Multiphoton analysis
-* **Computational neuroanatomy**
-
-# Data management
-
-#
-![](img/errant-science-data-organisation.jpg){fig-align="center"}
-
-::: footer
-[errantscience.com](https://errantscience.com/)
-:::
-
-#
-![](img/data-organisation-over-time.jpg){fig-align="center"}
-
-::: footer
-[errantscience.com](https://errantscience.com/)
-:::
-
-# Data standards as a solution
-
-## {.smaller}
-
-![](img/NWB.png){fig-align="left" height="150px"}
-
-![](img/nwb_data.png){fig-align="center" height="370px"}
-
-::: footer
-[nwb.org](https://www.nwb.org/)
-:::
-
-##
-
-![](img/BIDS.png){fig-align="left" height="150px"}
-
-![](img/BIDS_data.png){fig-align="center" height="370px"}
-
-::: footer
-[bids.neuroimaging.io](https://bids.neuroimaging.io/)
-:::
-
-# Bridging the gap 
-
-
-##
-
-![](img/standards.png){fig-align="center" height="300px"}
-
-
-::: footer
-[xkcd.com](https://xkcd.com/927/)
-:::
-
-
-## A simpler standard
-### [`NeuroBlueprint`](https://github.com/neuroinformatics-unit/NeuroBlueprint)
-:::{.incremental}
- * Inspired by BIDS
- * Lightweight data specification for (systems) neuroscience
- * Maximise benefits of standardisation
- * Minimise burden
-:::
-
-::: footer
-[neuroblueprint.neuroinformatics.dev](https://neuroblueprint.neuroinformatics.dev)
-:::
-
-
-##
-![](img/NeuroBlueprint_project_tree_light.png){fig-align="center" height="550px"}
-
-::: footer
-[neuroblueprint.neuroinformatics.dev](https://neuroblueprint.neuroinformatics.dev)
-:::
-
-
-## Aiding adoption
-### [`datashuttle`](https://github.com/neuroinformatics-unit/datashuttle)
-
-
-![](img/datashuttle.png){fig-align="center" height="450px"}
-
-::: footer
-[datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev)
-:::
-
-
-## Python API
-```python
-from datashuttle import DataShuttle
-
-project = DataShuttle("my_first_project")
-project.make_config_file(
-    local_path=r"C:\Users\Joe\data\local\my_first_project",
-    central_path=r"C:\Users\Joe\data\central\my_first_project",
-    connection_method="local_filesystem",
-)
-project.create_folders(
-    top_level_folder="rawdata",
-    sub_names="sub-001",
-    ses_names="ses-001_@DATE@",
-    datatype=["behav", "ephys"]
-)
-
-project.upload_entire_project()
-```
-
-::: footer
-[datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev)
-:::
-
-## Terminal user interface
-
-![](img/datashuttle_tui.png){fig-align="center"}
-
-::: footer
-[datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev)
-:::
-
-
-
-## Future
-:::{.incremental}
-* Standardise metadata
-* Export to NWB
-* Converge with BIDS 2.0
-* Eventually not be recquired!
-:::
-
-::: footer
-[datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev)
-:::
-
-# Behavioural analysis
-## Quantifying behaviour: ethogram {.smaller}
-
-
-| Time after start (min) | Foraging | Eating | Grooming |
-|------------------------|----------|--------|----------|
-| 0:30                   | 0        | 0      | 1        |
-| 1:00                   | 0        | 0      | 1        |
-| 1:30                   | 1        | 0      | 0        |
-| 2:00                   | 0        | 1      | 0        |
-
-## Quantifying behaviour: modern {.smaller}
-![](img/modern_behav_experiment_analysis.png){fig-align="center" height="500px"}
-
-
-::: footer
-[Luxem, K. et al. (2023) “Open-source tools for behavioral video analysis: Setup, methods, and best practices” eLife, 12:e79305](https://doi.org/10.7554/eLife.79305)
-:::
-
-## Pose estimation {.smaller}
-
-![source: [sleap.ai](https://sleap.ai/)](img/sleap_movie.gif){fig-align="center" height="450px" style="text-align: center"}
-
-
-::: aside
-Many others: 
-[DeepLabCut](http://www.mackenziemathislab.org/deeplabcut),
-[LightningPose](https://github.com/danbider/lightning-pose),
-[DeepPoseKit](https://github.com/jgraving/DeepPoseKit),
-[Anipose](https://anipose.readthedocs.io/en/latest/),
-...
-:::
-
-#
-![](img/movement_title.png){fig-align=center, height="80px"}
-
-![](img/movement_overview.png){fig-align=center}
-
-::: footer
-[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev)
-:::
-
-## Python API
-```python
-from movement.io import load_poses, save_poses
-from movement.filtering import filter_by_confidence, interpolate_over_time
-from movement.filtering import savgol_filter
-
-ds = load_poses.from_file("/path/to/file.analysis.h5", source_software="SLEAP", fps=30)
-ds = filter_by_confidence(ds, threshold=0.6)
-ds = interpolate_over_time(ds, method="linear", max_gap=1)
-ds = savgol_filter(ds, window_length=0.2, polyorder=2)
-
-save_poses.to_lp_file(ds, "/path/to/file.csv")
-
-displacement = ds.move.compute_displacement()
-velocity = ds.move.compute_velocity()
-accel = ds.move.compute_acceleration()
-
-```
-
-
-## napari plugin{.smaller}
-![](img/napari_movement.png){fig-align=center}
-
-::: footer
-[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev)
-:::
-## Future
-:::{.incremental}
-- Support for more formats
-- NWB export
-- Support for all relevant kinematic variables
-- Arbitrary regions of interest analysis
-- Define and transform coordinate systems
-:::
-
-::: footer
-[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev)
-:::
-
-# Anatomy
-
-## BrainGlobe Initiative {.smaller}
-
-::: {.columns}
-::: {.column width="55%"}
-Established 2020 with three aims:
-
-:::{.incremental}
-1. Develop general-purpose tools to help others build interoperable software
-2. Develop specialist software for specific analysis and visualisation needs
-3. Reduce barriers of entry, and facilitate the building of an ecosystem of computational neuroanatomy tools.
-:::
-
-:::
-::: {.column width="45%"}
-![](img/tracing.png)
-:::
-:::
-
-::: footer
-[brainglobe.info](https://brainglobe.info/)
-:::
-
-
-## BrainGlobe Atlas API
-### [brainglobe-atlasapi](https://github.com/brainglobe/brainglobe-atlasapi)
-![](img/atlases.png){fig-align="center"}
-
-::: footer
-[Claudi, F. et al. (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” JOSS, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
-:::
-
-## Current atlases {.smaller}
-::: {style="font-size: 70%;"}
-
-- [Allen Mouse Brain Atlas](https://doi.org/10.1016/j.cell.2020.04.007) at 10, 25, 50 and 100 micron resolutions
-- [Allen Human Brain Atlas](https://www.brain-map.org) at 100 micron resolution
-- [Max Planck Zebrafish Brain Atlas](http://fishatlas.neuro.mpg.de) at 1 micron resolution
-- [Enhanced and Unified Mouse Brain Atlas](https://kimlab.io/brain-map/atlas/) at 10, 25, 50 and 100 micron resolutions
-- [Smoothed version of the Kim et al. mouse reference atlas](https://doi.org/10.1016/j.celrep.2014.12.014) at 10, 25, 50 and 100 micron resolutions
-- [Gubra's LSFM mouse brain atlas](https://doi.org/10.1007/s12021-020-09490-8) at 20 micron resolution
-- [3D version of the Allen mouse spinal cord atlas](https://doi.org/10.1101/2021.05.06.443008) at 20 x 10 x 10 micron resolution
-- [AZBA: A 3D Adult Zebrafish Brain Atlas](https://doi.org/10.1101/2021.05.04.442625) at 4 micron resolution
-- [Waxholm Space atlas of the Sprague Dawley rat brain](https://doi.org/10.1038/s41592-023-02034-3) at 39 micron resolution
-- [3D Edge-Aware Refined Atlases Derived from the Allen Developing Mouse Brain Atlases](https://doi.org/10.7554/eLife.61408) (E13, E15, E18, P4, P14, P28 & P56)
-- [Princeton Mouse Brain Atlas](https://brainmaps.princeton.edu/2020/09/princeton-mouse-brain-atlas-links) at 20 micron resolution
-- [Kim Lab Developmental CCF (P56)](https://data.mendeley.com/datasets/2svx788ddf/1) at 10 micron resolution with 8 reference images - STP, LSFM (iDISCO) and MRI (a0, adc, dwo, fa, MTR, T2)
-- [Blind Mexican Cavefish Brain Atlas](https://doi.org/10.7554/eLife.80777) at 2um resolution
-:::
-
-::: footer
-[Claudi, F. et al. (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” JOSS, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
-:::
-
-
-::: footer
-[Claudi, F. et al. (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” JOSS, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
-:::
-
-
-
-## BrainGlobe Atlas API {.smaller}
-```python
-from brainglobe_atlasapi.bg_atlas import BrainGlobeAtlas
-atlas = BrainGlobeAtlas("allen_mouse_25um")
-
-reference_image = atlas.reference
-print(reference_image.shape)
-# (528, 320, 456)
-
-annotation_image = atlas.annotation
-print(annotation_image.shape)
-# (528, 320, 456)
-
-from pprint import pprint
-VISp = atlas.structures["VISp"]
-pprint(VISp)
-
-# {'acronym': 'VISp',
-#  'id': 385,
-#  'mesh': None,
-#  'mesh_filename': PosixPath('/home/user/.brainglobe/allen_mouse_25um_v0.3/meshes/385.obj'),
-#  'name': 'Primary visual area',
-#  'rgb_triplet': [8, 133, 140],
-#  'structure_id_path': [997, 8, 567, 688, 695, 315, 669, 385]}
-```
-
-::: footer
-[Claudi, F. et al. (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” JOSS, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
-:::
-
-
-# Version 1
-Whole brain microscopy
-
-## 
-![](img/whole.png){fig-align="center" width=70%}
-
-## 
-![](img/crop.png){fig-align="center" width=70%}
-
-## Whole-brain registration
-### [`brainreg`](https://github.com/brainglobe/brainreg)
-
-![](img/brainreg.png){fig-align="center" width=110%}
-
-
-::: footer
-[Tyson, A. L. et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Sci Rep, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
-:::
-
-## 3D cell detection
-### [`cellfinder`](https://github.com/brainglobe/cellfinder)
-![](img/raw.png){fig-align="center" width=70%}
-
-::: footer
-[Tyson, A. L. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
-:::
-
-## 3D cell detection
-### [`cellfinder`](https://github.com/brainglobe/cellfinder)
-![](img/detect.png){fig-align="center" width=70%}
-
-::: footer
-[Tyson, A. L. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
-:::
-
-
-## 3D cell detection
-### [`cellfinder`](https://github.com/brainglobe/cellfinder)
-![](img/classify.png){fig-align="center" width=70%}
-
-::: footer
-[Tyson, A. L. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
-:::
-
-
-## 3D cell detection
-### [`cellfinder`](https://github.com/brainglobe/cellfinder)
-![](img/cells.png){fig-align="center" width=70%}
-
-::: footer
-[Tyson, A. L. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
-:::
-
-## Spatial analysis
-### [`brainglobe-segmentation`](https://github.com/brainglobe/brainglobe-segmentation)
-![](img/brainglobe-seg.png){fig-align="center" width=100%}
-
-::: footer
-[Tyson, A. L. et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Sci Rep, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
-:::
-
-
-
-## Visualisation {background-video="img/cellfinder_small.mp4" background-video-loop="true"}
-### [`brainrender`](https://github.com/brainglobe/brainrender)
-
-::: footer
-[Claudi, F. et al. (2021) “Visualizing anatomically registered data with Brainrender” eLife, 10:e65751](https://doi.org/10.7554/eLife.65751)
-:::
-
-# Version 2
-Expanding access
-
-## Adding new atlases {.smaller}
-- Allen mouse brain with barrel annotations
-- Blind mexican cavefish
-- Latest version of Waxholm rat
-- Axolotl
-- Prarier Vole
-- Princeton RAtlas
-- Cuttlefish
-- Developmental Mouse Brain atlas
-- NHP
-- Human
-
-## Building novel atlases
-![](img/blackcap.png){fig-align="center" width=120%}
-
-::: footer
-[github.com/brainglobe/brainglobe-template-builder](https://github.com/brainglobe/brainglobe-template-builder)
-:::
-
-## More raw data processing
-![](img/brainglobe-stitch.png){fig-align="center"}
-
-::: footer
-[github.com/brainglobe/brainglobe-stitch](https://github.com/brainglobe/brainglobe-stitch)
-:::
-
-
-## Consistent napari environment
-![](img/brainrender-napari.png){fig-align="center"}
-
-::: footer
-[github.com/brainglobe/brainrender-napari](https://github.com/brainglobe/brainrender-napari)
-:::
-
-## Support for more data types
-![](img/brainglobe-registration-demo.png){fig-align="center"}
-
-::: footer
-[github.com/brainglobe/brainglobe-registration](https://github.com/brainglobe/brainglobe-registration)
-:::
-
-
-# Thanks
-
-##
-#### Support
-
-![](img/institutes.png){fig-align="center" height="90px"}
-
-![](img/funders.png){fig-align="center" height="90px"}
-
-:::{.fragment}
-#### Contributors
-
-::: {style="font-size: 40%;"}
-
-Stephen Lenzi, Rob Campbell, Joe Ziminski, Sofia Miñano, Niko Sirmpilatze, Nicholas Del Grosso, Laura Porta, Lee Cossell, Antonin Blot, David Pérez-Suárez, David Stansby, Will Graham, Patrick Roddy, Adrien Berchet, Mathieu Bourdenx, Ben Kantor, NovaFae, David Young, Sam Clothier, Gubra-ApS, Kailyn Fields, ramroomh, Samuel Diebolt, Chris Roat, Oren Amsalem, kclamar, Draga Doncila Pop, juanma9613, Jules Scholler, Iaroslavna Vasylieva, Nicolas Peschke, Justin Kiggins, Peter Sobolewski, Simão Bolota, chili-chiu, jaimergp, Sebastian Lammers, Matt Colligan, Paul Brodersen, Carter Peene, francesshei, Sean Martin, Adam Tyson, Federico Claudi, Luigi Petrucco, Alessandro Felder, Christian Niedworok, Charly Rousseau, Horst Obenhaus, Chryssanthi Tsitoura, Sepiedeh Keshavarzi, Mateo Vélez-Fort, Ben Dichter, 4iar, Marco Musy, Anna Medyukhina, stegiopast, EmanPaoli, lidakanari, Alexis Arnaudon, Yaroslav Halchenko, Ziyang Liu, Philip Shamash, koushik-ms, Harald Reingruber, Emily Jane Dennis, Peak, Maximilian Blacher, Hernando Martinez Vergara, Estelle, nicole-vissers, GD, Michael Kunst, Estelle Nassar, Sara Mederos, Igor Tatarnikov, Viktor Plattner, Carlo Castoldi, Jingjie Li, Guillaume Le Goc, Harry Carey, Matt Einhorn, Kimberly Meechan, Robert Kozol, Chang Huan Lo, Dhruv Sharma, Brandon Peri, Ivan Varela
-
-:::
-
-:::
-
-##
-#### Team
-
-::: {layout-nrow=1}
-
-![Laura Porta](img/laura_porta.png)
-
-![Chang Huan lo](img/chang_huan_lo.png)
-
-![Joe Ziminski](img/joe_ziminski.png)
-
-![Alessandro Felder](img/alessandro_felder.png)
-
-![Niko Sirmpilatze](img/niko_sirmpilatze.png)
-
-![Igor Tatarnikov](img/igor_tatarnikov.jpg)
-
-![Sofía Miñano](img/sofia_minano.png)
-:::
-
-
-:::{.fragment}
-#### More details
-
+## More details
 ### [neuroinformatics.dev](https://neuroinformatics.dev/)
-### [brainglobe.info](http://brainglobe.info/)
 
-:::
+# The course
+
+# Installation
+
+{{< include slides/installation.qmd >}}
+
+# Course details
+
+## Course schedule{.smaller}
+
+**Monday, September 30th**
+- Introduction to the course & Introduction to Python (1)
+
+**Tuesday, October 1st**
+- Data management and sharing (1 & 2)
+
+**Wednesday, October 2nd**
+- Introduction to Python (2) & Version control and software development best practices
+
+**Thursday, October 3rd**
+- Video behavioural analysis (1 & 2)
+
+**Friday, October 4th**
+- Linux and high-performance computing
+
+**Monday, October 7th**
+- General microscopy & Histology analysis (1)
+
+**Tuesday, October 8th**
+- Histology analysis (2 & 3)
+
+## Monday, September 30th{.smaller}
+
+#### 14:00-17:00: Introduction to Python (1)
+**Aims:**
+
+**Location:** SWC Brasserie Seminar Room
+
+**Lead by:** Sofía Miñano, Igor Tatarnikov, Chang Huan Lo & Adam Tyson
+
+## Tuesday, October 1st{.smaller}
+
+#### 10:00-11:00: Data management and sharing (1)
+**Aims:**
+
+**Location:** SWC Ground Floor Lecture Theatre
+
+**Lead by:** Joe Ziminski, Niko Sirmpilatze
+
+#### 15:00-17:00: Data management and sharing (2)
+**Aims:**
+
+**Location:** SWC Ground Floor Lecture Theatre
+
+**Lead by:** Joe Ziminski, Niko Sirmpilatze
+
+## Wednesday, October 2nd{.smaller}
+
+#### 10:00-12:30: Introduction to Python (2) 
+**Aims:**
+
+**Location:** GCNU Seminar Room
+
+**Lead by:** Sofía Miñano, Igor Tatarnikov, Chang Huan Lo & Adam Tyson
+
+#### 13:30-17:00: Version control and software development best practices
+**Aims:**
+
+**Location:** GCNU Seminar Room
+
+**Lead by:** Alessandro Felder, Laura Porta, Steve Lenzi
+
+## Thursday, October 3rd{.smaller}
+
+#### 10:00-13:00: Video behavioural analysis (1)
+**Aims:**
+
+**Location:** SWC Brasserie Seminar Room
+
+**Lead by:** Niko Sirmpilatze, Sofía Miñano, Chang Huan Lo
+
+#### 14:00-17:00: Video behavioural analysis
+**Aims:**
+
+**Location:** SWC Brasserie Seminar Room
+
+**Lead by:** Niko Sirmpilatze, Sofía Miñano, Chang Huan Lo
+
+
+## Friday, October 4th{.smaller}
+
+#### 10:00-13:00: Linux and high-performance computing
+**Aims:** To learn some basic principles of high-performance computing, and run a specific workflow on the SWC system
+
+**Location:** SWC Ground Floor Lecture Theatre
+
+**Lead by:** Niko Sirmpilatze, Igor Tatarnikov, Adam Tyson
+
+## Monday, October 4th{.smaller}
+
+#### 11:00-12:00: General microscopy: basics
+**Aims:** Learn basic concepts about microscopy to enable specific histology analyses
+
+**Location:** SWC Brasserie Seminar Room
+
+**Lead by:** Rob Campbell
+
+#### 13:00-14:30: General microscopy: applications
+**Aims:** Learn basic concepts about microscopy to enable specific histology analyses
+
+**Location:** SWC Brasserie Seminar Room
+
+**Lead by:** Rob Campbell
+
+#### 14:30-18:00: Histology analysis (1)
+**Aims:** Introduce napari and the BrainGlobe ecosystem of tools along with some basic image analysis concepts
+
+**Location:** SWC Brasserie Seminar Room
+
+**Lead by:** Alessandro Felder, Igor Tatarnikov, Adam Tyson
+
+
+## Tuesday, October 5th{.smaller}
+
+#### 10:00-11:00: Histology analysis (2)
+**Aims:** Learn how to register whole brain microscopy data to an atlas, and analyse structures within the images.
+
+**Location:** SWC Ground Floor Lecture Theatre
+
+**Lead by:** Alessandro Felder, Igor Tatarnikov, Adam Tyson
+
+
+#### 14:00-17:00: Histology analysis (3)
+**Aims:** Learn how to detect cells in large images, and analyse and visualise the results
+
+**Location:** SWC Ground Floor Lecture Theatre
+
+**Lead by:** Alessandro Felder, Igor Tatarnikov, Adam Tyson
+
+
+# Any questions?
