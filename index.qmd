@@ -155,7 +155,7 @@ format:
 **Lead by:** Sofía Miñano, Igor Tatarnikov, Chang Huan Lo & Adam Tyson
 
 #### 13:30-17:00: Version control and software development best practices
-**Aims:**
+**Aims:** Learn how to keep track of changes to your code with Git and GitHub, work with others on code, and get an initial idea of how structure, document and test your code.
 
 **Location:** GCNU Seminar Room
 
