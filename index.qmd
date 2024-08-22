@@ -100,7 +100,7 @@ format:
 ## Course schedule{.smaller}
 
 **Monday, September 30th**
-- Introduction to the course & Introduction to Python (1)
+- Introduction to Python (1)
 
 **Tuesday, October 1st**
 - Data management and sharing (1 & 2)
