@@ -1,0 +1,17 @@
+## Installing Python {.smaller}
+
+### macOS and Linux
+
+1. Open a terminal
+2. Run the following commands:
+```{bash}
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh
+```
+
+### Windows
+
+1. Download the installer from [Miniforge](https://github.com/conda-forge/miniforge)
+2. Double click on the installer
+3. Accept all defaults,  **BUT**
+    i) Make sure to check the box to add Miniforge to your PATH
