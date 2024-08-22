@@ -123,7 +123,7 @@ format:
 ## Monday, September 30th{.smaller}
 
 #### 14:00-17:00: Introduction to Python (1)
-**Aims:**
+**Aims:** Run your first Python script and learn about variables, data types, loops and conditional statements in Python.
 
 **Location:** SWC Brasserie Seminar Room
 
@@ -148,7 +148,7 @@ format:
 ## Wednesday, October 2nd{.smaller}
 
 #### 10:00-12:30: Introduction to Python (2) 
-**Aims:**
+**Aims:** Learn how to use third-party Python libraries, work with functions, classes, and objects, and handle exceptions in Python.
 
 **Location:** GCNU Seminar Room
 
