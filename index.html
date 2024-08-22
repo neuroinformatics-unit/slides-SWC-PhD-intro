@@ -8,10 +8,10 @@
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.53">
+  <meta name="generator" content="quarto-1.5.56">
 
-  <meta name="author" content="Adam Tyson">
-  <title>Building Software Tools for Systems Neuroscience</title>
+  <meta name="author" content="SWC/GCNU Neuroinformatics Unit">
+  <title>Software Skills for Systems Neuroscience</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,71 +29,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #383a42;  }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #383a42; } /* Normal */
-    code span.al { color: #95da4c; background-color: #4d1f24; font-weight: bold; } /* Alert */
-    code span.an { color: #50a14f; } /* Annotation */
-    code span.at { color: #a626a4; } /* Attribute */
-    code span.bn { color: #986801; } /* BaseN */
-    code span.bu { color: #a626a4; } /* BuiltIn */
-    code span.cf { color: #a626a4; } /* ControlFlow */
-    code span.ch { color: #50a14f; } /* Char */
-    code span.cn { color: #986801; } /* Constant */
-    code span.co { color: #a0a1a7; font-style: italic; } /* Comment */
-    code span.cv { color: #e45649; font-style: italic; } /* CommentVar */
-    code span.do { color: #e45649; } /* Documentation */
-    code span.dt { color: #a626a4; } /* DataType */
-    code span.dv { color: #986801; } /* DecVal */
-    code span.er { color: #f44747; text-decoration: underline; } /* Error */
-    code span.ex { color: #4078f2; font-weight: bold; } /* Extension */
-    code span.fl { color: #986801; } /* Float */
-    code span.fu { color: #4078f2; } /* Function */
-    code span.im { color: #50a14f; } /* Import */
-    code span.in { color: #c45b00; } /* Information */
-    code span.kw { color: #a626a4; } /* Keyword */
-    code span.op { color: #a626a4; } /* Operator */
-    code span.ot { color: #27ae60; } /* Other */
-    code span.pp { color: #a626a4; } /* Preprocessor */
-    code span.re { color: #2980b9; background-color: #153042; } /* RegionMarker */
-    code span.sc { color: #0184bc; } /* SpecialChar */
-    code span.ss { color: #da4453; } /* SpecialString */
-    code span.st { color: #50a14f; } /* String */
-    code span.va { color: #e45649; } /* Variable */
-    code span.vs { color: #da4453; } /* VerbatimString */
-    code span.wa { color: #da4453; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -394,13 +329,12 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#000000" data-background-image="img/swc-building.jpg" data-background-opacity="0.6" data-background-position="center" data-background-size="cover" class="quarto-title-block center">
-  <h1 class="title">Building Software Tools for Systems Neuroscience</h1>
-  <p class="subtitle">INCF/OCNS Software WG</p>
+  <h1 class="title">Software Skills for Systems Neuroscience</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Adam Tyson 
+SWC/GCNU Neuroinformatics Unit 
 </div>
 </div>
 </div>
@@ -411,578 +345,12 @@ Adam Tyson
 <h1>About us</h1>
 
 </section>
-<section id="neuroinformatics-unit" class="slide level2 smaller">
+<section id="neuroinformatics-unit" class="slide level2">
 <h2>Neuroinformatics Unit</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<ul>
-<li>Sainsbury Wellcome Centre &amp; Gatsby Computational Neuroscience Unit, UCL (London)</li>
-</ul>
-</div><div class="column" style="width:60%;">
-<p><img data-src="img/SWC.jpg"></p>
-</div></div>
+<p>(Systems) neuroscience &amp; machine learning <strong>research software engineering</strong> group</p>
 </section>
-<section id="neuroinformatics-unit-1" class="slide level2 smaller">
-<h2>Neuroinformatics Unit</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<ul>
-<li>Sainsbury Wellcome Centre &amp; Gatsby Computational Neuroscience Unit, UCL (London)</li>
-</ul>
-<div class="fragment">
-<ul>
-<li>(Systems) neuroscience &amp; machine learning <strong>research software engineering</strong> group</li>
-</ul>
-</div>
-</div><div class="column" style="width:60;">
-<p><img data-src="img/SWC_map_pin.png"></p>
-</div></div>
-</section>
-<section id="what-we-do" class="slide level2">
-<h2>What we do</h2>
-<div>
-<ul>
-<li class="fragment"><strong>Data analysis software</strong> (anatomy, electrophysiology, functional imaging, behaviour)</li>
-<li class="fragment"><strong>Data management</strong> (specifications, tools)</li>
-<li class="fragment"><strong>Collaborations</strong> (data science, software development, productionisation)</li>
-</ul>
-</div>
-</section>
-<section id="current-projects" class="slide level2">
-<h2>Current projects</h2>
-<div>
-<ul>
-<li class="fragment">Data standardisation and management</li>
-<li class="fragment">Developer tools</li>
-<li class="fragment">Modelling</li>
-<li class="fragment">Extracellular electrophysiology analysis</li>
-<li class="fragment">Video behavioural analysis</li>
-<li class="fragment">Multiphoton analysis</li>
-<li class="fragment">Computational neuroanatomy</li>
-</ul>
-</div>
-</section>
-<section id="current-projects-1" class="slide level2">
-<h2>Current projects</h2>
-<ul>
-<li><strong>Data standardisation and management</strong></li>
-<li>Developer tools</li>
-<li>Modelling</li>
-<li>Extracellular electrophysiology analysis</li>
-<li><strong>Video behavioural analysis</strong></li>
-<li>Multiphoton analysis</li>
-<li><strong>Computational neuroanatomy</strong></li>
-</ul>
-</section></section>
-<section id="data-management" class="title-slide slide level1 center">
-<h1>Data management</h1>
-
-</section>
-
-<section id="section" class="title-slide slide level1 center">
-<h1></h1>
-
-<img data-src="img/errant-science-data-organisation.jpg" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
-<p><a href="https://errantscience.com/">errantscience.com</a></p>
-</div>
-</section>
-
-<section id="section-1" class="title-slide slide level1 center">
-<h1></h1>
-
-<img data-src="img/data-organisation-over-time.jpg" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
-<p><a href="https://errantscience.com/">errantscience.com</a></p>
-</div>
-</section>
-
-<section>
-<section id="data-standards-as-a-solution" class="title-slide slide level1 center">
-<h1>Data standards as a solution</h1>
-
-</section>
-<section id="section-2" class="slide level2 smaller">
-<h2></h2>
-<div class="quarto-figure quarto-figure-left">
-<figure>
-<p><img data-src="img/NWB.png" class="quarto-figure quarto-figure-left" height="150"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/nwb_data.png" class="quarto-figure quarto-figure-center" height="370"></p>
-</figure>
-</div>
-<div class="footer">
-<p><a href="https://www.nwb.org/">nwb.org</a></p>
-</div>
-</section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<div class="quarto-figure quarto-figure-left">
-<figure>
-<p><img data-src="img/BIDS.png" class="quarto-figure quarto-figure-left" height="150"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/BIDS_data.png" class="quarto-figure quarto-figure-center" height="370"></p>
-</figure>
-</div>
-<div class="footer">
-<p><a href="https://bids.neuroimaging.io/">bids.neuroimaging.io</a></p>
-</div>
-</section></section>
-<section>
-<section id="bridging-the-gap" class="title-slide slide level1 center">
-<h1>Bridging the gap</h1>
-
-</section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/standards.png" class="quarto-figure quarto-figure-center" height="300"></p>
-</figure>
-</div>
-<div class="footer">
-<p><a href="https://xkcd.com/927/">xkcd.com</a></p>
-</div>
-</section>
-<section id="a-simpler-standard" class="slide level2">
-<h2>A simpler standard</h2>
-<h3 id="neuroblueprint"><a href="https://github.com/neuroinformatics-unit/NeuroBlueprint"><code>NeuroBlueprint</code></a></h3>
-<div>
-<ul>
-<li class="fragment">Inspired by BIDS</li>
-<li class="fragment">Lightweight data specification for (systems) neuroscience</li>
-<li class="fragment">Maximise benefits of standardisation</li>
-<li class="fragment">Minimise burden</li>
-</ul>
-</div>
-<div class="footer">
-<p><a href="https://neuroblueprint.neuroinformatics.dev">neuroblueprint.neuroinformatics.dev</a></p>
-</div>
-</section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/NeuroBlueprint_project_tree_light.png" class="quarto-figure quarto-figure-center" height="550"></p>
-</figure>
-</div>
-<div class="footer">
-<p><a href="https://neuroblueprint.neuroinformatics.dev">neuroblueprint.neuroinformatics.dev</a></p>
-</div>
-</section>
-<section id="aiding-adoption" class="slide level2">
-<h2>Aiding adoption</h2>
-<h3 id="datashuttle"><a href="https://github.com/neuroinformatics-unit/datashuttle"><code>datashuttle</code></a></h3>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/datashuttle.png" class="quarto-figure quarto-figure-center" height="450"></p>
-</figure>
-</div>
-<div class="footer">
-<p><a href="https://datashuttle.neuroinformatics.dev">datashuttle.neuroinformatics.dev</a></p>
-</div>
-</section>
-<section id="python-api" class="slide level2">
-<h2>Python API</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">from</span> datashuttle <span class="im">import</span> DataShuttle</span>
-<span id="cb1-2"><a href=""></a></span>
-<span id="cb1-3"><a href=""></a>project <span class="op">=</span> DataShuttle(<span class="st">"my_first_project"</span>)</span>
-<span id="cb1-4"><a href=""></a>project.make_config_file(</span>
-<span id="cb1-5"><a href=""></a>    local_path<span class="op">=</span><span class="vs">r"C:\Users\Joe\data\local\my_first_project"</span>,</span>
-<span id="cb1-6"><a href=""></a>    central_path<span class="op">=</span><span class="vs">r"C:\Users\Joe\data\central\my_first_project"</span>,</span>
-<span id="cb1-7"><a href=""></a>    connection_method<span class="op">=</span><span class="st">"local_filesystem"</span>,</span>
-<span id="cb1-8"><a href=""></a>)</span>
-<span id="cb1-9"><a href=""></a>project.create_folders(</span>
-<span id="cb1-10"><a href=""></a>    top_level_folder<span class="op">=</span><span class="st">"rawdata"</span>,</span>
-<span id="cb1-11"><a href=""></a>    sub_names<span class="op">=</span><span class="st">"sub-001"</span>,</span>
-<span id="cb1-12"><a href=""></a>    ses_names<span class="op">=</span><span class="st">"ses-001_@DATE@"</span>,</span>
-<span id="cb1-13"><a href=""></a>    datatype<span class="op">=</span>[<span class="st">"behav"</span>, <span class="st">"ephys"</span>]</span>
-<span id="cb1-14"><a href=""></a>)</span>
-<span id="cb1-15"><a href=""></a></span>
-<span id="cb1-16"><a href=""></a>project.upload_entire_project()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="footer">
-<p><a href="https://datashuttle.neuroinformatics.dev">datashuttle.neuroinformatics.dev</a></p>
-</div>
-</section>
-<section id="terminal-user-interface" class="slide level2">
-<h2>Terminal user interface</h2>
-
-<img data-src="img/datashuttle_tui.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
-<p><a href="https://datashuttle.neuroinformatics.dev">datashuttle.neuroinformatics.dev</a></p>
-</div>
-</section>
-<section id="future" class="slide level2">
-<h2>Future</h2>
-<div>
-<ul>
-<li class="fragment">Standardise metadata</li>
-<li class="fragment">Export to NWB</li>
-<li class="fragment">Converge with BIDS 2.0</li>
-<li class="fragment">Eventually not be recquired!</li>
-</ul>
-</div>
-<div class="footer">
-<p><a href="https://datashuttle.neuroinformatics.dev">datashuttle.neuroinformatics.dev</a></p>
-</div>
-</section></section>
-<section>
-<section id="behavioural-analysis" class="title-slide slide level1 center">
-<h1>Behavioural analysis</h1>
-
-</section>
-<section id="quantifying-behaviour-ethogram" class="slide level2 smaller">
-<h2>Quantifying behaviour: ethogram</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Time after start (min)</th>
-<th>Foraging</th>
-<th>Eating</th>
-<th>Grooming</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>0:30</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>1:00</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>1:30</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>2:00</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="quantifying-behaviour-modern" class="slide level2 smaller">
-<h2>Quantifying behaviour: modern</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/modern_behav_experiment_analysis.png" class="quarto-figure quarto-figure-center" height="500"></p>
-</figure>
-</div>
-<div class="footer">
-<p><a href="https://doi.org/10.7554/eLife.79305">Luxem, K. et al.&nbsp;(2023) “Open-source tools for behavioral video analysis: Setup, methods, and best practices” eLife, 12:e79305</a></p>
-</div>
-</section>
-<section id="pose-estimation" class="slide level2 smaller">
-<h2>Pose estimation</h2>
-<div class="quarto-figure quarto-figure-center" style="text-align: center">
-<figure>
-<p><img data-src="img/sleap_movie.gif" height="450"></p>
-<figcaption>source: <a href="https://sleap.ai/">sleap.ai</a></figcaption>
-</figure>
-</div>
-
-<aside><div>
-<p>Many others: <a href="http://www.mackenziemathislab.org/deeplabcut">DeepLabCut</a>, <a href="https://github.com/danbider/lightning-pose">LightningPose</a>, <a href="https://github.com/jgraving/DeepPoseKit">DeepPoseKit</a>, <a href="https://anipose.readthedocs.io/en/latest/">Anipose</a>, …</p>
-</div></aside></section></section>
-<section>
-<section id="section-6" class="title-slide slide level1 center">
-<h1></h1>
-<div class="quarto-figure quarto-figure-center,">
-<figure>
-<p><img data-src="img/movement_title.png" class="quarto-figure quarto-figure-center," height="80"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/movement_overview.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-<div class="footer">
-<p><a href="https://movement.neuroinformatics.dev">movement.neuroinformatics.dev</a></p>
-</div>
-</section>
-<section id="python-api-1" class="slide level2">
-<h2>Python API</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a><span class="im">from</span> movement.io <span class="im">import</span> load_poses, save_poses</span>
-<span id="cb2-2"><a href=""></a><span class="im">from</span> movement.filtering <span class="im">import</span> filter_by_confidence, interpolate_over_time</span>
-<span id="cb2-3"><a href=""></a><span class="im">from</span> movement.filtering <span class="im">import</span> savgol_filter</span>
-<span id="cb2-4"><a href=""></a></span>
-<span id="cb2-5"><a href=""></a>ds <span class="op">=</span> load_poses.from_file(<span class="st">"/path/to/file.analysis.h5"</span>, source_software<span class="op">=</span><span class="st">"SLEAP"</span>, fps<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb2-6"><a href=""></a>ds <span class="op">=</span> filter_by_confidence(ds, threshold<span class="op">=</span><span class="fl">0.6</span>)</span>
-<span id="cb2-7"><a href=""></a>ds <span class="op">=</span> interpolate_over_time(ds, method<span class="op">=</span><span class="st">"linear"</span>, max_gap<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb2-8"><a href=""></a>ds <span class="op">=</span> savgol_filter(ds, window_length<span class="op">=</span><span class="fl">0.2</span>, polyorder<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb2-9"><a href=""></a></span>
-<span id="cb2-10"><a href=""></a>save_poses.to_lp_file(ds, <span class="st">"/path/to/file.csv"</span>)</span>
-<span id="cb2-11"><a href=""></a></span>
-<span id="cb2-12"><a href=""></a>displacement <span class="op">=</span> ds.move.compute_displacement()</span>
-<span id="cb2-13"><a href=""></a>velocity <span class="op">=</span> ds.move.compute_velocity()</span>
-<span id="cb2-14"><a href=""></a>accel <span class="op">=</span> ds.move.compute_acceleration()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="napari-plugin" class="slide level2 smaller">
-<h2>napari plugin</h2>
-
-<img data-src="img/napari_movement.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
-<p><a href="https://movement.neuroinformatics.dev">movement.neuroinformatics.dev</a></p>
-</div>
-</section>
-<section id="future-1" class="slide level2">
-<h2>Future</h2>
-<div>
-<ul>
-<li class="fragment">Support for more formats</li>
-<li class="fragment">NWB export</li>
-<li class="fragment">Support for all relevant kinematic variables</li>
-<li class="fragment">Arbitrary regions of interest analysis</li>
-<li class="fragment">Define and transform coordinate systems</li>
-</ul>
-</div>
-<div class="footer">
-<p><a href="https://movement.neuroinformatics.dev">movement.neuroinformatics.dev</a></p>
-</div>
-</section></section>
-<section>
-<section id="anatomy" class="title-slide slide level1 center">
-<h1>Anatomy</h1>
-
-</section>
-<section id="brainglobe-initiative" class="slide level2 smaller scrollable">
-<h2>BrainGlobe Initiative</h2>
-<div class="columns">
-<div class="column" style="width:55%;">
-<p>Established 2020 with three aims:</p>
-<div>
-<ol type="1">
-<li class="fragment">Develop general-purpose tools to help others build interoperable software</li>
-<li class="fragment">Develop specialist software for specific analysis and visualisation needs</li>
-<li class="fragment">Reduce barriers of entry, and facilitate the building of an ecosystem of computational neuroanatomy tools.</li>
-</ol>
-</div>
-</div><div class="column" style="width:45%;">
-<p><img data-src="img/tracing.png"></p>
-</div></div>
-<div class="footer">
-<p><a href="https://brainglobe.info/">brainglobe.info</a></p>
-</div>
-</section>
-<section id="brainglobe-atlas-api" class="slide level2">
-<h2>BrainGlobe Atlas API</h2>
-<h3 id="brainglobe-atlasapi"><a href="https://github.com/brainglobe/brainglobe-atlasapi">brainglobe-atlasapi</a></h3>
-
-<img data-src="img/atlases.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
-<p><a href="https://doi.org/10.21105/joss.02668">Claudi, F. et al.&nbsp;(2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” JOSS, v5(54), 2668</a></p>
-</div>
-</section>
-<section id="current-atlases" class="slide level2 smaller">
-<h2>Current atlases</h2>
-<div style="font-size: 70%;">
-<ul>
-<li><a href="https://doi.org/10.1016/j.cell.2020.04.007">Allen Mouse Brain Atlas</a> at 10, 25, 50 and 100 micron resolutions</li>
-<li><a href="https://www.brain-map.org">Allen Human Brain Atlas</a> at 100 micron resolution</li>
-<li><a href="http://fishatlas.neuro.mpg.de">Max Planck Zebrafish Brain Atlas</a> at 1 micron resolution</li>
-<li><a href="https://kimlab.io/brain-map/atlas/">Enhanced and Unified Mouse Brain Atlas</a> at 10, 25, 50 and 100 micron resolutions</li>
-<li><a href="https://doi.org/10.1016/j.celrep.2014.12.014">Smoothed version of the Kim et al.&nbsp;mouse reference atlas</a> at 10, 25, 50 and 100 micron resolutions</li>
-<li><a href="https://doi.org/10.1007/s12021-020-09490-8">Gubra’s LSFM mouse brain atlas</a> at 20 micron resolution</li>
-<li><a href="https://doi.org/10.1101/2021.05.06.443008">3D version of the Allen mouse spinal cord atlas</a> at 20 x 10 x 10 micron resolution</li>
-<li><a href="https://doi.org/10.1101/2021.05.04.442625">AZBA: A 3D Adult Zebrafish Brain Atlas</a> at 4 micron resolution</li>
-<li><a href="https://doi.org/10.1038/s41592-023-02034-3">Waxholm Space atlas of the Sprague Dawley rat brain</a> at 39 micron resolution</li>
-<li><a href="https://doi.org/10.7554/eLife.61408">3D Edge-Aware Refined Atlases Derived from the Allen Developing Mouse Brain Atlases</a> (E13, E15, E18, P4, P14, P28 &amp; P56)</li>
-<li><a href="https://brainmaps.princeton.edu/2020/09/princeton-mouse-brain-atlas-links">Princeton Mouse Brain Atlas</a> at 20 micron resolution</li>
-<li><a href="https://data.mendeley.com/datasets/2svx788ddf/1">Kim Lab Developmental CCF (P56)</a> at 10 micron resolution with 8 reference images - STP, LSFM (iDISCO) and MRI (a0, adc, dwo, fa, MTR, T2)</li>
-<li><a href="https://doi.org/10.7554/eLife.80777">Blind Mexican Cavefish Brain Atlas</a> at 2um resolution</li>
-</ul>
-</div>
-<div class="footer">
-<p><a href="https://doi.org/10.21105/joss.02668">Claudi, F. et al.&nbsp;(2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” JOSS, v5(54), 2668</a></p>
-</div>
-<div class="footer">
-<p><a href="https://doi.org/10.21105/joss.02668">Claudi, F. et al.&nbsp;(2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” JOSS, v5(54), 2668</a></p>
-</div>
-</section>
-<section id="brainglobe-atlas-api-1" class="slide level2 smaller">
-<h2>BrainGlobe Atlas API</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="im">from</span> brainglobe_atlasapi.bg_atlas <span class="im">import</span> BrainGlobeAtlas</span>
-<span id="cb3-2"><a href=""></a>atlas <span class="op">=</span> BrainGlobeAtlas(<span class="st">"allen_mouse_25um"</span>)</span>
-<span id="cb3-3"><a href=""></a></span>
-<span id="cb3-4"><a href=""></a>reference_image <span class="op">=</span> atlas.reference</span>
-<span id="cb3-5"><a href=""></a><span class="bu">print</span>(reference_image.shape)</span>
-<span id="cb3-6"><a href=""></a><span class="co"># (528, 320, 456)</span></span>
-<span id="cb3-7"><a href=""></a></span>
-<span id="cb3-8"><a href=""></a>annotation_image <span class="op">=</span> atlas.annotation</span>
-<span id="cb3-9"><a href=""></a><span class="bu">print</span>(annotation_image.shape)</span>
-<span id="cb3-10"><a href=""></a><span class="co"># (528, 320, 456)</span></span>
-<span id="cb3-11"><a href=""></a></span>
-<span id="cb3-12"><a href=""></a><span class="im">from</span> pprint <span class="im">import</span> pprint</span>
-<span id="cb3-13"><a href=""></a>VISp <span class="op">=</span> atlas.structures[<span class="st">"VISp"</span>]</span>
-<span id="cb3-14"><a href=""></a>pprint(VISp)</span>
-<span id="cb3-15"><a href=""></a></span>
-<span id="cb3-16"><a href=""></a><span class="co"># {'acronym': 'VISp',</span></span>
-<span id="cb3-17"><a href=""></a><span class="co">#  'id': 385,</span></span>
-<span id="cb3-18"><a href=""></a><span class="co">#  'mesh': None,</span></span>
-<span id="cb3-19"><a href=""></a><span class="co">#  'mesh_filename': PosixPath('/home/user/.brainglobe/allen_mouse_25um_v0.3/meshes/385.obj'),</span></span>
-<span id="cb3-20"><a href=""></a><span class="co">#  'name': 'Primary visual area',</span></span>
-<span id="cb3-21"><a href=""></a><span class="co">#  'rgb_triplet': [8, 133, 140],</span></span>
-<span id="cb3-22"><a href=""></a><span class="co">#  'structure_id_path': [997, 8, 567, 688, 695, 315, 669, 385]}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="footer">
-<p><a href="https://doi.org/10.21105/joss.02668">Claudi, F. et al.&nbsp;(2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” JOSS, v5(54), 2668</a></p>
-</div>
-</section></section>
-<section>
-<section id="version-1" class="title-slide slide level1 center">
-<h1>Version 1</h1>
-<p>Whole brain microscopy</p>
-</section>
-<section id="section-7" class="slide level2">
-<h2></h2>
-
-<img data-src="img/whole.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"></section>
-<section id="section-8" class="slide level2">
-<h2></h2>
-
-<img data-src="img/crop.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"></section>
-<section id="whole-brain-registration" class="slide level2">
-<h2>Whole-brain registration</h2>
-<h3 id="brainreg"><a href="https://github.com/brainglobe/brainreg"><code>brainreg</code></a></h3>
-
-<img data-src="img/brainreg.png" class="quarto-figure quarto-figure-center r-stretch" style="width:110.0%"><div class="footer">
-<p><a href="https://doi.org/10.1038/s41598-021-04676-9">Tyson, A. L. et al.&nbsp;(2022) “Accurate determination of marker location within whole-brain microscopy images” Sci Rep, 12, 867</a></p>
-</div>
-</section>
-<section id="d-cell-detection" class="slide level2">
-<h2>3D cell detection</h2>
-<h3 id="cellfinder"><a href="https://github.com/brainglobe/cellfinder"><code>cellfinder</code></a></h3>
-
-<img data-src="img/raw.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><div class="footer">
-<p><a href="https://doi.org/10.1371/journal.pcbi.1009074">Tyson, A. L. et al.&nbsp;(2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets” PLoS Comp Biol 17(5): e1009074.</a></p>
-</div>
-</section>
-<section id="d-cell-detection-1" class="slide level2">
-<h2>3D cell detection</h2>
-<h3 id="cellfinder-1"><a href="https://github.com/brainglobe/cellfinder"><code>cellfinder</code></a></h3>
-
-<img data-src="img/detect.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><div class="footer">
-<p><a href="https://doi.org/10.1371/journal.pcbi.1009074">Tyson, A. L. et al.&nbsp;(2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets” PLoS Comp Biol 17(5): e1009074.</a></p>
-</div>
-</section>
-<section id="d-cell-detection-2" class="slide level2">
-<h2>3D cell detection</h2>
-<h3 id="cellfinder-2"><a href="https://github.com/brainglobe/cellfinder"><code>cellfinder</code></a></h3>
-
-<img data-src="img/classify.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><div class="footer">
-<p><a href="https://doi.org/10.1371/journal.pcbi.1009074">Tyson, A. L. et al.&nbsp;(2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets” PLoS Comp Biol 17(5): e1009074.</a></p>
-</div>
-</section>
-<section id="d-cell-detection-3" class="slide level2">
-<h2>3D cell detection</h2>
-<h3 id="cellfinder-3"><a href="https://github.com/brainglobe/cellfinder"><code>cellfinder</code></a></h3>
-
-<img data-src="img/cells.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><div class="footer">
-<p><a href="https://doi.org/10.1371/journal.pcbi.1009074">Tyson, A. L. et al.&nbsp;(2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets” PLoS Comp Biol 17(5): e1009074.</a></p>
-</div>
-</section>
-<section id="spatial-analysis" class="slide level2">
-<h2>Spatial analysis</h2>
-<h3 id="brainglobe-segmentation"><a href="https://github.com/brainglobe/brainglobe-segmentation"><code>brainglobe-segmentation</code></a></h3>
-
-<img data-src="img/brainglobe-seg.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://doi.org/10.1038/s41598-021-04676-9">Tyson, A. L. et al.&nbsp;(2022) “Accurate determination of marker location within whole-brain microscopy images” Sci Rep, 12, 867</a></p>
-</div>
-</section>
-<section id="visualisation" class="slide level2" data-background-video="img/cellfinder_small.mp4" data-background-video-loop="true">
-<h2>Visualisation</h2>
-<h3 id="brainrender"><a href="https://github.com/brainglobe/brainrender"><code>brainrender</code></a></h3>
-<div class="footer">
-<p><a href="https://doi.org/10.7554/eLife.65751">Claudi, F. et al.&nbsp;(2021) “Visualizing anatomically registered data with Brainrender” eLife, 10:e65751</a></p>
-</div>
-</section></section>
-<section>
-<section id="version-2" class="title-slide slide level1 center">
-<h1>Version 2</h1>
-<p>Expanding access</p>
-</section>
-<section id="adding-new-atlases" class="slide level2 smaller">
-<h2>Adding new atlases</h2>
-<ul>
-<li>Allen mouse brain with barrel annotations</li>
-<li>Blind mexican cavefish</li>
-<li>Latest version of Waxholm rat</li>
-<li>Axolotl</li>
-<li>Prarier Vole</li>
-<li>Princeton RAtlas</li>
-<li>Cuttlefish</li>
-<li>Developmental Mouse Brain atlas</li>
-<li>NHP</li>
-<li>Human</li>
-</ul>
-</section>
-<section id="building-novel-atlases" class="slide level2">
-<h2>Building novel atlases</h2>
-
-<img data-src="img/blackcap.png" class="quarto-figure quarto-figure-center r-stretch" style="width:120.0%"><div class="footer">
-<p><a href="https://github.com/brainglobe/brainglobe-template-builder">github.com/brainglobe/brainglobe-template-builder</a></p>
-</div>
-</section>
-<section id="more-raw-data-processing" class="slide level2">
-<h2>More raw data processing</h2>
-
-<img data-src="img/brainglobe-stitch.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
-<p><a href="https://github.com/brainglobe/brainglobe-stitch">github.com/brainglobe/brainglobe-stitch</a></p>
-</div>
-</section>
-<section id="consistent-napari-environment" class="slide level2">
-<h2>Consistent napari environment</h2>
-
-<img data-src="img/brainrender-napari.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
-<p><a href="https://github.com/brainglobe/brainrender-napari">github.com/brainglobe/brainrender-napari</a></p>
-</div>
-</section>
-<section id="support-for-more-data-types" class="slide level2">
-<h2>Support for more data types</h2>
-
-<img data-src="img/brainglobe-registration-demo.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
-<p><a href="https://github.com/brainglobe/brainglobe-registration">github.com/brainglobe/brainglobe-registration</a></p>
-</div>
-</section></section>
-<section>
-<section id="thanks" class="title-slide slide level1 center">
-<h1>Thanks</h1>
-
-</section>
-<section id="section-9" class="slide level2">
-<h2></h2>
-<h4 id="support">Support</h4>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/institutes.png" class="quarto-figure quarto-figure-center" height="90"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/funders.png" class="quarto-figure quarto-figure-center" height="90"></p>
-</figure>
-</div>
-<div class="fragment">
-<!-- -->
-<h4 id="contributors">Contributors</h4>
-<div style="font-size: 40%;">
-<p>Stephen Lenzi, Rob Campbell, Joe Ziminski, Sofia Miñano, Niko Sirmpilatze, Nicholas Del Grosso, Laura Porta, Lee Cossell, Antonin Blot, David Pérez-Suárez, David Stansby, Will Graham, Patrick Roddy, Adrien Berchet, Mathieu Bourdenx, Ben Kantor, NovaFae, David Young, Sam Clothier, Gubra-ApS, Kailyn Fields, ramroomh, Samuel Diebolt, Chris Roat, Oren Amsalem, kclamar, Draga Doncila Pop, juanma9613, Jules Scholler, Iaroslavna Vasylieva, Nicolas Peschke, Justin Kiggins, Peter Sobolewski, Simão Bolota, chili-chiu, jaimergp, Sebastian Lammers, Matt Colligan, Paul Brodersen, Carter Peene, francesshei, Sean Martin, Adam Tyson, Federico Claudi, Luigi Petrucco, Alessandro Felder, Christian Niedworok, Charly Rousseau, Horst Obenhaus, Chryssanthi Tsitoura, Sepiedeh Keshavarzi, Mateo Vélez-Fort, Ben Dichter, 4iar, Marco Musy, Anna Medyukhina, stegiopast, EmanPaoli, lidakanari, Alexis Arnaudon, Yaroslav Halchenko, Ziyang Liu, Philip Shamash, koushik-ms, Harald Reingruber, Emily Jane Dennis, Peak, Maximilian Blacher, Hernando Martinez Vergara, Estelle, nicole-vissers, GD, Michael Kunst, Estelle Nassar, Sara Mederos, Igor Tatarnikov, Viktor Plattner, Carlo Castoldi, Jingjie Li, Guillaume Le Goc, Harry Carey, Matt Einhorn, Kimberly Meechan, Robert Kozol, Chang Huan Lo, Dhruv Sharma, Brandon Peri, Ivan Varela</p>
-</div>
-</div>
-</section>
-<section id="section-10" class="slide level2">
-<h2></h2>
-<h4 id="team">Team</h4>
+<section id="team" class="slide level2">
+<h2>Team</h2>
 <div>
 
 </div>
@@ -1046,19 +414,142 @@ Adam Tyson
 </div>
 </div>
 </div>
-<div class="fragment">
-<!-- -->
-<h4 id="more-details">More details</h4>
-<h3 id="neuroinformatics.dev"><a href="https://neuroinformatics.dev/">neuroinformatics.dev</a></h3>
-<h3 id="brainglobe.info"><a href="http://brainglobe.info/">brainglobe.info</a></h3>
+</section>
+<section id="what-we-do" class="slide level2">
+<h2>What we do</h2>
+<div>
+<ul>
+<li class="fragment"><strong>Data analysis software</strong> (anatomy, electrophysiology, functional imaging, behaviour)</li>
+<li class="fragment"><strong>Data management</strong> (specifications, tools)</li>
+<li class="fragment"><strong>Collaborations</strong> (data science, software development, productionisation)</li>
+</ul>
 </div>
+</section>
+<section id="current-projects" class="slide level2">
+<h2>Current projects</h2>
+<div>
+<ul>
+<li class="fragment">Data standardisation and management</li>
+<li class="fragment">Developer tools</li>
+<li class="fragment">Modelling</li>
+<li class="fragment">Extracellular electrophysiology analysis</li>
+<li class="fragment">Video behavioural analysis</li>
+<li class="fragment">Multiphoton analysis</li>
+<li class="fragment">Computational neuroanatomy</li>
+</ul>
+</div>
+</section>
+<section id="more-details" class="slide level2">
+<h2>More details</h2>
+<h3 id="neuroinformatics.dev"><a href="https://neuroinformatics.dev/">neuroinformatics.dev</a></h3>
+</section></section>
+<section id="the-course" class="title-slide slide level1 center">
+<h1>The course</h1>
+
+</section>
+
+<section id="installation" class="title-slide slide level1 center">
+<h1>Installation</h1>
+
+</section>
+
+<section>
+<section id="course-details" class="title-slide slide level1 center">
+<h1>Course details</h1>
+
+</section>
+<section id="course-schedule" class="slide level2 smaller">
+<h2>Course schedule</h2>
+<p><strong>Monday, September 30th</strong> - Introduction to Python (1)</p>
+<p><strong>Tuesday, October 1st</strong> - Data management and sharing (1 &amp; 2)</p>
+<p><strong>Wednesday, October 2nd</strong> - Introduction to Python (2) &amp; Version control and software development best practices</p>
+<p><strong>Thursday, October 3rd</strong> - Video behavioural analysis (1 &amp; 2)</p>
+<p><strong>Friday, October 4th</strong> - Linux and high-performance computing</p>
+<p><strong>Monday, October 7th</strong> - General microscopy &amp; Histology analysis (1)</p>
+<p><strong>Tuesday, October 8th</strong> - Histology analysis (2 &amp; 3)</p>
+</section>
+<section id="monday-september-30th" class="slide level2 smaller">
+<h2>Monday, September 30th</h2>
+<h4 id="introduction-to-python-1">14:00-17:00: Introduction to Python (1)</h4>
+<p><strong>Aims:</strong> Run your first Python script and learn about variables, data types, loops and conditional statements in Python.</p>
+<p><strong>Location:</strong> SWC Brasserie Seminar Room</p>
+<p><strong>Lead by:</strong> Sofía Miñano, Igor Tatarnikov, Chang Huan Lo &amp; Adam Tyson</p>
+</section>
+<section id="tuesday-october-1st" class="slide level2 smaller">
+<h2>Tuesday, October 1st</h2>
+<h4 id="data-management-and-sharing-1">10:00-11:00: Data management and sharing (1)</h4>
+<p><strong>Aims:</strong></p>
+<p><strong>Location:</strong> SWC Ground Floor Lecture Theatre</p>
+<p><strong>Lead by:</strong> Joe Ziminski, Niko Sirmpilatze</p>
+<h4 id="data-management-and-sharing-2">15:00-17:00: Data management and sharing (2)</h4>
+<p><strong>Aims:</strong></p>
+<p><strong>Location:</strong> SWC Ground Floor Lecture Theatre</p>
+<p><strong>Lead by:</strong> Joe Ziminski, Niko Sirmpilatze</p>
+</section>
+<section id="wednesday-october-2nd" class="slide level2 smaller">
+<h2>Wednesday, October 2nd</h2>
+<h4 id="introduction-to-python-2">10:00-12:30: Introduction to Python (2)</h4>
+<p><strong>Aims:</strong> Learn how to use third-party Python libraries, work with functions, classes, and objects, and handle exceptions in Python.</p>
+<p><strong>Location:</strong> GCNU Seminar Room</p>
+<p><strong>Lead by:</strong> Sofía Miñano, Igor Tatarnikov, Chang Huan Lo &amp; Adam Tyson</p>
+<h4 id="version-control-and-software-development-best-practices">13:30-17:00: Version control and software development best practices</h4>
+<p><strong>Aims:</strong></p>
+<p><strong>Location:</strong> GCNU Seminar Room</p>
+<p><strong>Lead by:</strong> Alessandro Felder, Laura Porta, Steve Lenzi</p>
+</section>
+<section id="thursday-october-3rd" class="slide level2 smaller">
+<h2>Thursday, October 3rd</h2>
+<h4 id="video-behavioural-analysis-1">10:00-13:00: Video behavioural analysis (1)</h4>
+<p><strong>Aims:</strong> Introduction to the theory and practice of tracking animals in videos, including hands-on training of pose estimation models.</p>
+<p><strong>Location:</strong> SWC Brasserie Seminar Room</p>
+<p><strong>Lead by:</strong> Niko Sirmpilatze, Sofía Miñano, Chang Huan Lo</p>
+<h4 id="video-behavioural-analysis">14:00-17:00: Video behavioural analysis</h4>
+<p><strong>Aims:</strong> Using Python to analyse animal tracks produced via pose estimation: cleaning data, quantifying movement, extracting behavioural syllables.</p>
+<p><strong>Location:</strong> SWC Brasserie Seminar Room</p>
+<p><strong>Lead by:</strong> Niko Sirmpilatze, Sofía Miñano, Chang Huan Lo</p>
+</section>
+<section id="friday-october-4th" class="slide level2 smaller">
+<h2>Friday, October 4th</h2>
+<h4 id="linux-and-high-performance-computing">10:00-13:00: Linux and high-performance computing</h4>
+<p><strong>Aims:</strong> To learn some basic principles of high-performance computing, and run a specific workflow on the SWC system</p>
+<p><strong>Location:</strong> SWC Ground Floor Lecture Theatre</p>
+<p><strong>Lead by:</strong> Niko Sirmpilatze, Igor Tatarnikov, Adam Tyson</p>
+</section>
+<section id="monday-october-4th" class="slide level2 smaller">
+<h2>Monday, October 4th</h2>
+<h4 id="general-microscopy-basics">11:00-12:00: General microscopy: basics</h4>
+<p><strong>Aims:</strong> Learn basic concepts about microscopy to enable specific histology analyses</p>
+<p><strong>Location:</strong> SWC Brasserie Seminar Room</p>
+<p><strong>Lead by:</strong> Rob Campbell</p>
+<h4 id="general-microscopy-applications">13:00-14:30: General microscopy: applications</h4>
+<p><strong>Aims:</strong> Learn basic concepts about microscopy to enable specific histology analyses</p>
+<p><strong>Location:</strong> SWC Brasserie Seminar Room</p>
+<p><strong>Lead by:</strong> Rob Campbell</p>
+<h4 id="histology-analysis-1">14:30-18:00: Histology analysis (1)</h4>
+<p><strong>Aims:</strong> Introduce napari and the BrainGlobe ecosystem of tools along with some basic image analysis concepts</p>
+<p><strong>Location:</strong> SWC Brasserie Seminar Room</p>
+<p><strong>Lead by:</strong> Alessandro Felder, Igor Tatarnikov, Adam Tyson</p>
+</section>
+<section id="tuesday-october-5th" class="slide level2 smaller">
+<h2>Tuesday, October 5th</h2>
+<h4 id="histology-analysis-2">10:00-11:00: Histology analysis (2)</h4>
+<p><strong>Aims:</strong> Learn how to register whole brain microscopy data to an atlas, and analyse structures within the images.</p>
+<p><strong>Location:</strong> SWC Ground Floor Lecture Theatre</p>
+<p><strong>Lead by:</strong> Alessandro Felder, Igor Tatarnikov, Adam Tyson</p>
+<h4 id="histology-analysis-3">14:00-17:00: Histology analysis (3)</h4>
+<p><strong>Aims:</strong> Learn how to detect cells in large images, and analyse and visualise the results</p>
+<p><strong>Location:</strong> SWC Ground Floor Lecture Theatre</p>
+<p><strong>Lead by:</strong> Alessandro Felder, Igor Tatarnikov, Adam Tyson</p>
+</section></section>
+<section id="any-questions" class="title-slide slide level1 center">
+<h1>Any questions?</h1>
 <div class="quarto-auto-generated-content">
 <p><img src="img/logo_niu_light.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>neuroinformatics.dev | 2024-07-09</p>
+<p>software-skills.neuroinformatics.dev | 2024</p>
 </div>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
