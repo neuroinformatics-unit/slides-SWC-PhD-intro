@@ -15,3 +15,10 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 2. Double click on the installer
 3. Accept all defaults,  **BUT**
     i) Make sure to check the box to add Miniforge to your PATH
+
+##
+### Installing Git
+Follow the installation instructions [here](https://git-scm.com/downloads) (https://git-scm.com/downloads)
+
+### Installing GitHub CLI
+Follow the installation instructions [here](https://cli.github.com/) (https://cli.github.com/)
