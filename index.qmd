@@ -228,5 +228,7 @@ format:
 
 **Lead by:** Alessandro Felder, Igor Tatarnikov, Adam Tyson
 
+## Full details
+[software-skills.neuroinformatics.dev/courses/software-skills](https://software-skills.neuroinformatics.dev/courses/software-skills.html)
 
-# Any questions?
+### Any questions?
