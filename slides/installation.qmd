@@ -11,14 +11,13 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 #### Windows
 
-1. Download the installer from [https://github.com/conda-forge/miniforge](https://github.com/conda-forge/miniforge)
-2. Double click on the installer
-3. Accept all defaults,  **BUT**
-    i) Make sure to check the box to add Miniforge to your PATH
+1. Download and run the installer from [https://github.com/conda-forge/miniforge](https://github.com/conda-forge/miniforge)
+3. Accept all defaults,  **BUT** make sure to check the box to add Miniforge to your PATH
 
-### Installing Git
-Follow the installation instructions found at [https://git-scm.com/downloads](https://git-scm.com/downloads)
+### Set up Git and GitHub {.smaller}
 
-### Installing GitHub CLI
-Follow the installation instructions found at [https://cli.github.com/](https://cli.github.com/)
+1. Follow the installation instructions found at [https://git-scm.com/downloads](https://git-scm.com/downloads) to install Git
+2. Create a GitHub account at [https://github.com](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
+3. Install GitHub CLI by following the instructions found at [https://cli.github.com/](https://cli.github.com/)
+4. Run `gh auth login` to authenticate your GitHub account
 :::
