@@ -51,22 +51,30 @@ format:
 ## Neuroinformatics Unit
 (Systems) neuroscience & machine learning **research software engineering** group
 
-## Team
-::: {layout-nrow=1}
-![Laura Porta](img/laura_porta.png)
-
-![Chang Huan lo](img/chang_huan_lo.png)
-
-![Joe Ziminski](img/joe_ziminski.png)
-
-![Alessandro Felder](img/alessandro_felder.png)
-
-![Niko Sirmpilatze](img/niko_sirmpilatze.png)
-
-![Igor Tatarnikov](img/igor_tatarnikov.jpg)
-
-![Sofía Miñano](img/sofia_minano.png)
-:::
+## Team{.smaller}
+```{python}
+#| output: asis
+#| echo: false
+images = [
+    ("img/adam_tyson.jpg", "Adam Tyson"),
+    ("img/laura_porta.png", "Laura Porta"),
+    ("img/chang_huan_lo.png", "Chang Huan Lo"),
+    ("img/joe_ziminski.png", "Joe Ziminski"),
+    ("img/alessandro_felder.png", "Alessandro Felder"),
+    ("img/niko_sirmpilatze.png", "Niko Sirmpilatze"),
+    ("img/igor_tatarnikov.jpg", "Igor Tatarnikov"),
+    ("img/sofia_minano.png", "Sofía Miñano")
+]
+n_per_row = 4
+col_width = 80 / n_per_row
+print(":::: {.row}\n")
+for i, img in enumerate(images, start=1):
+  src, caption = img
+  print(f"::: {{.column width={col_width}%}}\n![{caption}]({src})\n:::\n")
+  if i % n_per_row == 0 and i != len(images):
+    print("::::\n:::: {.row}")
+print("::::")
+```
 
 ## What we do
 :::{.incremental}
@@ -181,7 +189,7 @@ format:
 ## Friday, October 4th{.smaller}
 
 #### 10:00-13:00: Linux and high-performance computing
-**Aims:** To learn some basic principles of high-performance computing, and run a specific workflow on the SWC system
+**Aims:** To learn some basic principles of high-performance computing (HPC), and run a specific workflow on the SWC HPC system
 
 **Location:** SWC Ground Floor Lecture Theatre
 
