@@ -147,7 +147,7 @@ print("::::")
 **Lead by:** Joe Ziminski, Niko Sirmpilatze
 
 #### 15:00-17:00: Data management and sharing (2)
-**Aims:**
+**Aims:** Discover the latest best practices in neuroscience data management and learn our recommended strategies and tools. 
 
 **Location:** SWC Ground Floor Lecture Theatre
 
