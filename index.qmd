@@ -140,14 +140,14 @@ print("::::")
 ## Tuesday, October 1st{.smaller}
 
 #### 10:00-11:00: Data management and sharing (1)
-**Aims:**
+**Aims:** Motivate the need for good neuroscience data management and introduce current best practices. 
 
 **Location:** SWC Ground Floor Lecture Theatre
 
 **Lead by:** Joe Ziminski, Niko Sirmpilatze
 
 #### 15:00-17:00: Data management and sharing (2)
-**Aims:** Discover the latest best practices in neuroscience data management and learn our recommended strategies and tools. 
+**Aims:** Learn our recommended data organisation principles and supporting software tools.
 
 **Location:** SWC Ground Floor Lecture Theatre
 
